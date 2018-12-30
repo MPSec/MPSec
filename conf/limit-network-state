@@ -1,0 +1,16 @@
+
+# enp0s8
+sudo tc qdisc add dev enp0s8 root handle 1:0 tbf rate 900Mbit burst 500k latency 1ms
+
+sudo tc qdisc change dev enp0s8 root handle 1:0 tbf rate 300Mbit burst 500k latency 1ms
+
+sudo tc qdisc add dev enp0s8 parent 1:0 handle 10 netem delay 1ms
+
+
+
+# enp0s9
+sudo tc qdisc add dev enp0s9 root handle 1:0 tbf rate 900Mbit burst 500k latency 1ms
+
+sudo tc qdisc change dev enp0s9 root handle 1:0 tbf rate 300Mbit burst 500k latency 1ms
+
+sudo tc qdisc add dev enp0s9 parent 1:0 handle 10 netem delay 1ms
