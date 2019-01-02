@@ -34,12 +34,13 @@
 * ffserver conf 를 이용한 ffserver 실행
   * 설치 <https://wnsgml972.github.io/ffmpeg/ffmpeg_ffserver_config.html>
   * 사용법 <https://wnsgml972.github.io/ffmpeg/ffmpeg_ffserver_streamming.html>
-* VM Adapter (5개 이상의 어뎁터 생성)
-  * [VM Adapter 5](/contents/in_vm_create_more_than_5_adaters.md)
 * localhost Interface 설정
   * [localhost Interface](/contents/localhost.md)
 * IpSec
   * [IpSec](/contents/ipsec.md)
+* VM 사용 시
+  * [VM Adapter 5](/contents/in_vm_create_more_than_5_adaters.md), (5개 이상의 어뎁터 생성)
+  * [Network 대역폭 제한](/conf/limit-network-state)
 
 
 <br/>
