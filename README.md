@@ -1,5 +1,3 @@
-# MPSec Dashboard 정리
-
 ## Overview
 
 ### 프로젝트의 목적
@@ -13,6 +11,17 @@
 
 ### MPTCP 기본 구조
 MPTCP는 전송 계층 프로토콜의 한 종류이며 사용자와 서버 사이의 2가지 이상의 네트워킹 인터페이스를 활용하여 하나의 TCP 스트림을 다중 경로로 전송할 수 있는 프로토콜이다. 만약 둘 중 하나의 경우만 MPTCP 프로토콜이 이용 가능할 경우 기존 TCP 방식을 통해 통신하기 때문에 호환성 또한 뛰어나다고 할 수 있다.
+
+### 구현사항
+- ubuntu 16.04 OS에 mptcp 커널 부팅
+- network 환경 구축
+- ffmpeg를 이용한 스트리밍 환경 구축
+- dashboard 구현
+- 자동화와 GUI bash 명령어 실행을 위한 각종 스크립트 코드 구현
+- packet capture program 구현
+- system config output program 구현
+- 문서화
+
 
 <br/><br/>
 
