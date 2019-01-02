@@ -42,7 +42,7 @@
   * ifdown ifup, 원하는 인터페이스 down 또는 up 조절
   * play-ffmpeg, input url 조절
   * bw.sh 네트워크 대역폭 1초마다 계속,  bw1.sh 네트워크 대역폭 한번
-  * [BandWidth Readme](/contents/bandwidth.md)
+  * [Bandwidth Readme](/contents/bandwidth.md)
 * ipsec-sh
   * 쉘 스크립트 모음
   * wget, capture 프로그램 개발
