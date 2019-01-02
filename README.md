@@ -1,6 +1,32 @@
-## MPSec Dashboard 정리
+# MPSec Dashboard 정리
+
+## Overview
+
+### 가상 머신을 이용 (mptcp kernel)
+
+![vm](/md_images/vm.png)
+
+### TestBed 구성 예시
+
+![TestBed](/md_images/testSet.png)
+
+### Single Path
+
+![Single Path](/md_images/sptcp.png)
+
+### Multi Path
+
+![Multi Path](/md_images/mptcp.png)
+
+### IPSec
+
+![IPSec](/md_images/ipsec.png)
+
+<br/>
 
 ## 환경 설정 (ubuntu 16.04, tomcat 8, mptcp 커널로 부팅)
+* mptcp kernel
+  * <https://www.multipath-tcp.org/>
 * Tomcat
   * <https://wnsgml972.github.io/linux/linux_ubuntu_tomcat.html>
 * JSP
@@ -15,11 +41,15 @@
 * IpSec
   * [IpSec](/contents/ipsec.md)
 
+
+<br/>
+
 ## clone시 할 것 (user로 로그인 하면 편함!)
   1. /dashboard/conf/ffserver.conf의 ACL allow에 스트리밍 서버를 올릴 ip 추가  [conf 파일 변경]
   2. /dashboard/WebContent/jsp/* 파일들의 실행 path 모두 변경 [user로 로그인 시 필요 없음]
   4. wget 사용을 위해 상대방 컴퓨터의 ROOT에 file1 ~ file4 올려놓기
   5. ipsec-sh 디렉토리의 path 변경 [user로 로그인 시 필요 없음]
+  6. ffserver on
 
 ## 개발 시 검색 키워드 [ 조절 ]
 * 프로그래밍 시 url path나 chart를 수정
