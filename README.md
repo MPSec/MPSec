@@ -50,6 +50,7 @@ PC1과 PC2에 mptcp kernel을 부팅한다. 먼저 Multi Path 동작 확인의 �
 
 ![IPSec](/md_images/ipsec.png)
 
+
 <br/><br/>
 
 ## 환경 설정 (ubuntu 16.04, tomcat 8, mptcp 커널로 부팅)
@@ -69,6 +70,8 @@ PC1과 PC2에 mptcp kernel을 부팅한다. 먼저 Multi Path 동작 확인의 �
 * VM 사용 시
   * [VM Adapter 5](/contents/in_vm_create_more_than_5_adaters.md), (5개 이상의 어뎁터 생성)
   * [Network 대역폭 제한](/conf/limit-network-state)
+* [System Config Output](/contents/system.md), 기본 제공 기능
+
 
 
 <br/>
