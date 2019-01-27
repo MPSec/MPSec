@@ -5,12 +5,12 @@ PC1과 PC2에 mptcp kernel을 부팅한다. 먼저 Multi Path 동작 확인의 �
 
 ## TestBed 구성 예시
 
-MPTCH Kernel | Multi Path
+MPTCP Kernel | Multi Path
 ---------|----------
 ![vm](/md_images/vm.png) | ![TestBed](/md_images/testSet.png)
 
 
-## `Single Path` vs `Multi Path`
+## Single Path vs Multi Path
 
 Single Path | Multi Path
 ---------|----------
@@ -19,7 +19,11 @@ Single Path | Multi Path
 
 ## IPSec
 
-![IPSec](/md_images/ipsec.png)
+IPSec |
+---------|----------
+![IPSec](/md_images/ipsec.png) | 
+
+
 
 
 

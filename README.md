@@ -6,9 +6,9 @@ Preparing...
 
 ## Project details
 
-For details on project structure and build process, please see the [Project Readme](/Project_Readme.md).
+For details on project structure and build process, please see the [Project Readme](/readme/Project_Readme.md).
 
-For technical design details, please see the [Design Notes](/Design_Readme.md).
+For technical design details, please see the [Design Notes](/readme/Design_Readme.md).
 
 
 
@@ -21,22 +21,20 @@ If you are interested in fixing issues and contributing directly to the code bas
 * How to build and run from source
 * Submitting pull requests
 * Commit message rule
-* [Development description for contribute](/Dev.md)
+* [Development description for contribute](/readme/Dev.md)
 
 
 
 
 ## Feedback
 
-* Ask a question on Github.
-* Request a new feature on GitHub.
+* Ask a question on Github Issues.
+* Request a new feature on GitHub Issues.
 * File a bug in GitHub Issues.
 
 
 
 ## License
-
-Copyright (c) JunHee Kim. All rights reserved.
 
 Licensed under the [GPL-3.0 License](/LICENSE).
 
