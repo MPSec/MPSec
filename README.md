@@ -4,9 +4,9 @@
 [![](https://img.shields.io/github/issues-pr/MPSec/Dashboard.svg?colorB=orange)	](https://github.com/MPSec/Dashboard/pulls)
 [![PR's Welcome](https://img.shields.io/badge/PRs%20-welcome-brightgreen.svg?colorB=yellow)](#contributing)
 
-## Overview
 
 Preparing...
+
 
 ## Project details
 
@@ -36,7 +36,7 @@ If you are interested in fixing issues and contributing directly to the code bas
 * [Ask a question on Github Issues.](https://github.com/MPSec/Dashboard/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Aquestion)
 * [Request a new feature on GitHub Issues.](https://github.com/MPSec/Dashboard/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Aenhancement)
 * [File a bug in GitHub Issues.](https://github.com/MPSec/Dashboard/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Abug)
-
+* Any feedback is welcome! :)
 
 
 ## License
