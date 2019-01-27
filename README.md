@@ -1,6 +1,6 @@
 # MPSec
 
-![Logo](/WebContent/images/MPSec_logo.png)
+<img src="/WebContent/images/MPSec_logo.png" width="150px" height="150px"/>
 
 ## Overview
 
