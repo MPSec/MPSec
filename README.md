@@ -1,25 +1,42 @@
+# MPSec
+
 ## Overview
+
+Preparing...
 
 ## Project details
 
-For details on project structure and build process, please see the [Project Readme](/Design_Readme.md).
+For details on project structure and build process, please see the [Project Readme](/Project_Readme.md).
 
-For technical design details, please see the [Design Notes](/Project_Readme.md).
+For technical design details, please see the [Design Notes](/Design_Readme.md).
 
-<br/>
 
-## License
-
-Code licensed under the [GPL-3.0 License](/LICENSE).
-
-<br/>
 
 ## Contributing
 
 This project welcomes contributions and suggestions. 
 
-When you submit a pull request, 
+If you are interested in fixing issues and contributing directly to the code base, please see the document How to Contribute, which covers the following:
 
-For more information see [FAQ](/FAQ.md) or contact wnsgml972@gmail.com with any additional questions or comments.
+* How to build and run from source
+* Submitting pull requests
+* Commit message rule
+* [Development description for contribute](/Dev.md)
 
-### [Development description for contribute](/Dev.md)
+
+
+
+## Feedback
+
+* Ask a question on Github.
+* Request a new feature on GitHub.
+* File a bug in GitHub Issues.
+
+
+
+## License
+
+Copyright (c) JunHee Kim. All rights reserved.
+
+Licensed under the [GPL-3.0 License](/LICENSE).
+
