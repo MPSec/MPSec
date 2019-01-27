@@ -1,6 +1,6 @@
 # MPSec
 
-![Logo](/WebContent/imgaes/MPSec_logo.png)
+![Logo](/WebContent/images/MPSec_logo.png)
 
 ## Overview
 
