@@ -1,5 +1,16 @@
 # Development description for contribute
 
+## Done
+- ubuntu 16.04 OS에 mptcp 커널 부팅
+- network 환경 구축
+- ffmpeg를 이용한 스트리밍 환경 구축
+- dashboard 구현
+- 자동화와 GUI bash 명령어 실행을 위한 각종 스크립트 코드 구현
+- packet capture program 구현
+- system config output program 구현
+- 문서화
+
+
 ## 환경 설정 (ubuntu 16.04, tomcat 8, mptcp 커널로 부팅)
 * mptcp kernel
   * <https://www.multipath-tcp.org/>
