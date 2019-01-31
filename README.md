@@ -33,8 +33,8 @@ If you are interested in fixing issues and contributing directly to the code bas
 ## Feedback
 
 * [Lables overview](https://github.com/MPSec/Dashboard/labels)
-* [Ask a question on Github Issues.](https://github.com/MPSec/Dashboard/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Aquestion)
-* [Request a new feature on GitHub Issues.](https://github.com/MPSec/Dashboard/labels/new%20feature)
+* [Ask a question in Github Issues.](https://github.com/MPSec/Dashboard/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Aquestion)
+* [Request a new feature in GitHub Issues.](https://github.com/MPSec/Dashboard/labels/new%20feature)
 * [File a bug in GitHub Issues.](https://github.com/MPSec/Dashboard/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Abug)
 * Any feedback is welcome! :)
 
