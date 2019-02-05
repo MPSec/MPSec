@@ -61,7 +61,8 @@ $ sudo su
 $ dmesg | grep MPTCP (MPTCP 커널로 정상 부팅했는지 확인)
 </pre>
 
-![mptcp kernel](/md_images/mptcp-kernel.png)
+
+<img src="/md_images/mptcp-kernel.png" width="150px" height="150px"/>
 
 
 
@@ -71,8 +72,8 @@ $ dmesg | grep MPTCP (MPTCP 커널로 정상 부팅했는지 확인)
 ## Start MPSec
 
 <pre>
-$ sudo su
 # cd /home/user/Dashboard/installer/
-# chmod 777 ./set-start/*
-# ./installer/start-mpsec.sh
+# ./start-mpsec.sh
 </pre>
+
+![start-mpsec](/md_images/start-mpsec.gif)
