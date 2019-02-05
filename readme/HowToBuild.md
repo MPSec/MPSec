@@ -62,9 +62,7 @@ $ dmesg | grep MPTCP (MPTCP 커널로 정상 부팅했는지 확인)
 </pre>
 
 
-<img src="/md_images/mptcp-kernel.png" width="150px" height="150px"/>
-
-
+<img src="/md_images/mptcp-kernel.png" width="500px" height="380px"/>
 
 
 <br/>
@@ -76,4 +74,4 @@ $ dmesg | grep MPTCP (MPTCP 커널로 정상 부팅했는지 확인)
 # ./start-mpsec.sh
 </pre>
 
-![start-mpsec](/md_images/start-mpsec.gif)
+<img src="/md_images/start-mpsec.gif" width="500px" height="380px"/>
