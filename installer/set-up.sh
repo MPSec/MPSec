@@ -77,9 +77,10 @@ sudo apt install ffmpeg
 
 userName="user"
 mkdir ~$userName/tomcat8/webapps/ROOT/dashboard
-git clone https://github.com/MPSec/Dashboard.git
-cd Dashboard
+cd ../
 cp -r conf ~$userName/tomcat8/webapps/ROOT/dashboard/.
 cp -r etri-jsp-sh ~$userName/tomcat8/webapps/ROOT/dashboard/.
-cp -r WebContent/ ~/tomcat8/webapps/ROOT/dashboard/.
+cp -r ipsec-sh ~$userName/tomcat8/webapps/ROOT/dashboard/.
+cp -r system-cpp-sh ~$userName/tomcat8/webapps/ROOT/dashboard/.
+cp -r WebContent ~$userName/tomcat8/webapps/ROOT/dashboard/.
 vim index.html
