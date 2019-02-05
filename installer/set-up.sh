@@ -74,17 +74,12 @@ hash -r
 echo "MANPATH_MAP $HOME/bin $HOME/ffmpeg_build/share/man" >> ~/.manpath
 . ~/.profile
 sudo apt install ffmpeg
-mkdir ~etri/tomcat8/webapps/ROOT/dashboard
-git clone -b etri https://github.com/wnsgml972/Dashboard-Thema.git
-cd Dashboard-Thema
-cp -r conf ~etri/tomcat8/webapps/ROOT/dashboard/.
-cp -r etri-jsp-sh ~etri/tomcat8/webapps/ROOT/dashboard/.
-cp -r WebContent/ ~/tomcat8/webapps/ROOT/dashboard/.
 
-mkdir ~etri/tomcat8/webapps/ROOT/dashboard
-git clone -b etri https://github.com/wnsgml972/Dashboard-Thema.git
-cd Dashboard-Thema
-cp -r conf ~etri/tomcat8/webapps/ROOT/dashboard/.
-cp -r etri-jsp-sh ~etri/tomcat8/webapps/ROOT/dashboard/.
+userName="user"
+mkdir ~$userName/tomcat8/webapps/ROOT/dashboard
+git clone https://github.com/MPSec/Dashboard.git
+cd Dashboard
+cp -r conf ~$userName/tomcat8/webapps/ROOT/dashboard/.
+cp -r etri-jsp-sh ~$userName/tomcat8/webapps/ROOT/dashboard/.
 cp -r WebContent/ ~/tomcat8/webapps/ROOT/dashboard/.
-vi index.html
+vim index.html
