@@ -1,12 +1,18 @@
 # MPSec
 
 [![Language](https://img.shields.io/badge/NaverFest-Finalist-brightgreen.svg)](https://github.com/D2CampusFest/6th)
-[![](https://img.shields.io/github/issues-pr/MPSec/Dashboard.svg?colorB=orange)	](https://github.com/MPSec/Dashboard/pulls)
+[![](https://img.shields.io/github/issues-pr/MPSec/Dashboard.svg?colorB=orange)](https://github.com/MPSec/Dashboard/pulls)
 [![PR's Welcome](https://img.shields.io/badge/PRs%20-welcome-brightgreen.svg?colorB=yellow)](#contributing)
 
 
-Preparing...
+MPSec(Multipath Security) uses [mptcp protocol](https://github.com/multipath-tcp/mptcp), a multi-path transmission technology, to provide highly reliable networking that can effectively cope with network failure situations.
 
+In addition, it has the following additional functions.
+* Real-time monitoring using `Dashboard` enables users to manage effectively.
+* Encrypts packets using `IPSec`.
+* Network speed is improved when communicating with similar bandwidth.
+
+Please check Project details for more information.
 
 ## Project details
 
