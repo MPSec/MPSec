@@ -19,9 +19,9 @@ Single Path | Multi Path
 
 ## IPSec
 
-IPSec |
+IPSec | empty
 ---------|----------
-![IPSec](/md_images/ipsec.png) | 
+![IPSec](/md_images/ipsec.png) | empty
 
 
 
