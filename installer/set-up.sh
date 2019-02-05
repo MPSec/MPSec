@@ -1,6 +1,7 @@
 sudo apt-key adv --keyserver hkp://keys.gnupg.net --recv-keys 379CE192D401AB61
 sudo sh -c "echo 'deb https://dl.bintray.com/cpaasch/deb stretch main' > /etc/apt/sources.list.d/mptcp.list"
 sudo apt-get update
+sudo apt-get install build-essential libncurses5 libncurses5-dev kernel-package bin86 libssl-dev ftpd ssh iperf speedometer git vim net-tools strongswan
 sudo apt-get install linux-mptcp
 sudo apt-get install openjdk-8-jre-headless
 sudo apt-get install openjdk-8-jdk
