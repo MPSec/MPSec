@@ -1,26 +1,16 @@
-# Very simple to install and run.
 
 ## Check
 
 * [New ways to verify that Multipath TCP works through your network — MPTCP](http://blog.multipath-tcp.org/blog/html/2015/12/16/mptcp_tools.html): 내 컴퓨터/서버가 MPTCP를 지원하는지 간단히 확인하는 방법을 설명한다.
-
-
-
-<br/>
-
-## Environment
-
 * MultiPath TCP - Linux Kernel implementation
-* Disk 32GB
-* LAM 4GB
-* Login to `user`
-
+* Minimum Disk 24GB
+* Minimum RAM 4GB
 
 
 
 <br/>
 
-## Install
+## Install & Build
 
 ### Download install program
 
@@ -63,6 +53,35 @@ $ dmesg | grep MPTCP (MPTCP 커널로 정상 부팅했는지 확인)
 
 
 <img src="/md_images/mptcp-kernel.png" width="500px" height="380px"/>
+
+
+<br/>
+
+## Configure Environment
+
+### Overview
+
+> [Details readme](./Design_Readme.md)
+
+![set](/md_images/testSet.png)
+
+### Easy
+1. Login to user **(PC1)**
+2. [IPSec Configuration](https://github.com/MPSec/Dashboard/blob/master/contents/ipsec.md) **(PC1, PC2)**
+3. IP settings as shown above **(PC1, PC2)**
+4. Start MPSec **(PC1)**
+
+### Custom
+1. `/Dashboard/conf/ffserver.conf`의 ACL allow에 스트리밍 서버를 올릴 ip 추가  [conf 파일 변경] **(PC1)**
+2. `/Dashboard/WebContent/jsp/*` 파일들의 실행 path 모두 변경 [user로 로그인 시 필요 없음] **(PC1)**
+3. ipsec-sh 디렉토리의 path 변경 [user로 로그인 시 필요 없음]
+2. [IPSec Configuration](https://github.com/MPSec/Dashboard/blob/master/contents/ipsec.md) **(PC1, PC2)**
+5. wget 사용을 위해 ROOT에 file1 ~ file4 올려놓기 **(PC2)**
+6. Network 구성 **(PC1, PC2)**
+6. 구성된 Network IP 설정, `/Dashboard/WebContent/build/js/custom.min.js` 제일 아래 확인 **(PC1)**
+7. Start MPSec **(PC1)**
+
+
 
 
 <br/>

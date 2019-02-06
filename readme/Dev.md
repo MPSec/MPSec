@@ -36,26 +36,6 @@
 * [System Config Output](/contents/system.md), 기본 제공 기능
 
 
-
-<br/>
-
-## clone시 첫 환경 구성
-
-### Custom Environment
-1. `/Dashboard/conf/ffserver.conf`의 ACL allow에 스트리밍 서버를 올릴 ip 추가  [conf 파일 변경]
-2. `/Dashboard/WebContent/jsp/*` 파일들의 실행 path 모두 변경 [user로 로그인 시 필요 없음]
-3. ipsec-sh 디렉토리의 path 변경 [user로 로그인 시 필요 없음]
-4. IPSec Conf 설정하기
-5. wget 사용을 위해 상대방 컴퓨터의 ROOT에 file1 ~ file4 올려놓기 [test를 위함]
-6. 통신을 위한 인터페이스 IP 설정, `/Dashboard/WebContent/build/js/custom.min.js` 제일 아래 확인
-7. MPSec on
-
-### Easy Environment
-1. user로 로그인
-2. 그림과 같은 IP 설정
-3. MPSec on
-
-
 <br/>
 
 ## 개발 시 검색 키워드 [ 조절 ]
