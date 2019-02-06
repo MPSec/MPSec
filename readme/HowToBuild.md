@@ -63,7 +63,7 @@ $ dmesg | grep MPTCP (MPTCP 커널로 정상 부팅했는지 확인)
 
 > [Details readme](./Design_Readme.md)
 
-![set](/md_images/testSet.png)
+![set](/md_images/overview.png)
 
 ### Easy
 1. Login to user **(PC1)**
