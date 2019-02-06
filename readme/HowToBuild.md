@@ -57,7 +57,7 @@ $ sudo su
        GRUB_HIDDEN_TIMEOUT=0
        GRUB_HIDDEN_TIMEOUT_QUIT=true
 # update-grub
-# reboot (재부팅 시 Advanced option for linux 선택 후 4.4.70+ 커널 선택 후 부팅)
+# reboot (재부팅 시 Advanced option for linux 선택 후 4.4.110+ 커널 선택 후 부팅, 버젼 업그레드 될 수 있음!)
 $ dmesg | grep MPTCP (MPTCP 커널로 정상 부팅했는지 확인)
 </pre>
 
