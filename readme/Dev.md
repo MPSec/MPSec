@@ -69,6 +69,7 @@
 * build/js/custom.min.js
   * junhee code 주석 검색 (제일 위, 제일 아래)
   * lineChart 검색( 여기서 네트워크 대역폭 차트 조절 )
+[]  * 유선 인터페이스 IP 설정
 * build/js/custom.jun.js
   * 커스텀 자바 스크립트
 
