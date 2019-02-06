@@ -2,25 +2,30 @@
 
 ## Done
 - ubuntu 16.04 OS에 mptcp 커널 부팅
-- network 환경 구축
+- network 환경 구축 및 Testbed Docs
 - ffmpeg를 이용한 스트리밍 환경 구축
-- dashboard 구현
+- Dashboard 구현
 - 자동화와 GUI bash 명령어 실행을 위한 각종 스크립트 코드 구현
 - packet capture program 구현
 - system config output program 구현
+- install program 구현
 - 문서화
 
 
 ## 환경 설정 (ubuntu 16.04, tomcat 8, mptcp 커널로 부팅)
 * mptcp kernel
   * <https://www.multipath-tcp.org/>
+  * [MPSec Installer](https://github.com/MPSec/Dashboard/blob/master/readme/HowToBuild.md)
 * Tomcat
   * <https://wnsgml972.github.io/linux/linux_ubuntu_tomcat.html>
+  * [MPSec Installer](https://github.com/MPSec/Dashboard/blob/master/readme/HowToBuild.md)  
 * JSP
   * <https://wnsgml972.github.io/linux/linux_jsp.html>
+  * [MPSec Installer](https://github.com/MPSec/Dashboard/blob/master/readme/HowToBuild.md)  
 * ffserver conf 를 이용한 ffserver 실행
   * 설치 <https://wnsgml972.github.io/ffmpeg/ffmpeg_ffserver_config.html>
   * 사용법 <https://wnsgml972.github.io/ffmpeg/ffmpeg_ffserver_streamming.html>
+  * [MPSec Installer](https://github.com/MPSec/Dashboard/blob/master/readme/HowToBuild.md)  
 * localhost Interface 설정
   * [localhost Interface](/contents/localhost.md)
 * IpSec
@@ -34,15 +39,28 @@
 
 <br/>
 
-## clone시 할 것 (user로 로그인 하면 편함!)
-  1. /dashboard/conf/ffserver.conf의 ACL allow에 스트리밍 서버를 올릴 ip 추가  [conf 파일 변경]
-  2. /dashboard/WebContent/jsp/* 파일들의 실행 path 모두 변경 [user로 로그인 시 필요 없음]
-  4. wget 사용을 위해 상대방 컴퓨터의 ROOT에 file1 ~ file4 올려놓기
-  5. ipsec-sh 디렉토리의 path 변경 [user로 로그인 시 필요 없음]
-  6. ffserver on
+## clone시 첫 환경 구성
+
+### Custom Environment
+1. `/Dashboard/conf/ffserver.conf`의 ACL allow에 스트리밍 서버를 올릴 ip 추가  [conf 파일 변경]
+2. `/Dashboard/WebContent/jsp/*` 파일들의 실행 path 모두 변경 [user로 로그인 시 필요 없음]
+3. ipsec-sh 디렉토리의 path 변경 [user로 로그인 시 필요 없음]
+4. IPSec Conf 설정하기
+5. wget 사용을 위해 상대방 컴퓨터의 ROOT에 file1 ~ file4 올려놓기 [test를 위함]
+6. 통신을 위한 인터페이스 IP 설정, `/Dashboard/WebContent/build/js/custom.min.js` 제일 아래 확인
+7. MPSec on
+
+### Easy Environment
+1. user로 로그인
+2. 그림과 같은 IP 설정
+3. MPSec on
+
+
+<br/>
 
 ## 개발 시 검색 키워드 [ 조절 ]
 * 프로그래밍 시 url path나 chart를 수정
+
 
 <hr/>
 
