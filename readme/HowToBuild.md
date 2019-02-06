@@ -67,18 +67,19 @@ $ dmesg | grep MPTCP (MPTCP 커널로 정상 부팅했는지 확인)
 
 ### Easy
 1. Login to user **(PC1)**
-2. [IPSec Configuration](https://github.com/MPSec/Dashboard/blob/master/contents/ipsec.md) **(PC1, PC2)**
-3. IP settings as shown above **(PC1, PC2)**
-4. Start MPSec **(PC1)**
+2. `/Dashboard/conf/ffserver.conf` file open -> Add custom IP1 in `ACL allow` **(PC1)**
+3. [IPSec Configuration](https://github.com/MPSec/Dashboard/blob/master/contents/ipsec.md) **(PC1, PC2)**
+4. IP settings as shown above **(PC1, PC2)**
+5. Start MPSec **(PC1)**
 
 ### Custom
-1. `/Dashboard/conf/ffserver.conf`의 ACL allow에 스트리밍 서버를 올릴 ip 추가  [conf 파일 변경] **(PC1)**
-2. `/Dashboard/WebContent/jsp/*` 파일들의 실행 path 모두 변경 [user로 로그인 시 필요 없음] **(PC1)**
-3. ipsec-sh 디렉토리의 path 변경 [user로 로그인 시 필요 없음]
-2. [IPSec Configuration](https://github.com/MPSec/Dashboard/blob/master/contents/ipsec.md) **(PC1, PC2)**
+1. `/Dashboard/WebContent/jsp/*` 파일들의 실행 path 모두 변경 **(PC1)**
+2. ipsec-sh 디렉토리의 path 변경
+3. `/Dashboard/conf/ffserver.conf` file open -> Add custom IP1 in `ACL allow` **(PC1)**
+4. [IPSec Configuration](https://github.com/MPSec/Dashboard/blob/master/contents/ipsec.md) **(PC1, PC2)**
 5. wget 사용을 위해 ROOT에 file1 ~ file4 올려놓기 **(PC2)**
-6. Network 구성 **(PC1, PC2)**
-6. 구성된 Network IP 설정, `/Dashboard/WebContent/build/js/custom.min.js` 제일 아래 확인 **(PC1)**
+6. Custom Network 구성 **(PC1, PC2)**
+6. 구성된 Network IP 설정, `/Dashboard/WebContent/build/js/custom.min.js` 제일 아래에 IP 입력 **(PC1)**
 7. Start MPSec **(PC1)**
 
 
