@@ -12,7 +12,7 @@
 
 ## Install & Build
 
-### Download install program
+### Install MPSec
 
 <pre>
 $ sudo su
