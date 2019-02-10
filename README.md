@@ -12,7 +12,7 @@ In addition, it has the following additional functions.
 * Real-time monitoring using `Dashboard` enables users to manage effectively.
 * Packets are encrypted by using `IPSec`.
 * Network speed is improved when communicating with similar bandwidth.
-* Compatibility is very good because it is possible to communicate with tcp protocol.
+* Compatibility is good because it is possible to communicate with tcp protocol.
 
 Please check Project details for more information.
 
