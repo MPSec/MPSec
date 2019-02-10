@@ -1,3 +1,5 @@
+userName="user"
+
 sudo apt-key adv --keyserver hkp://keys.gnupg.net --recv-keys 379CE192D401AB61
 sudo sh -c "echo 'deb https://dl.bintray.com/cpaasch/deb stretch main' > /etc/apt/sources.list.d/mptcp.list"
 sudo apt-get update
@@ -5,13 +7,14 @@ sudo apt-get install build-essential libncurses5 libncurses5-dev kernel-package 
 sudo apt-get install linux-mptcp
 sudo apt-get install openjdk-8-jre-headless
 sudo apt-get install openjdk-8-jdk
-cd /home/user/
+
+cd /home/$userName/
 wget http://apache.tt.co.kr/tomcat/tomcat-8/v8.5.37/bin/apache-tomcat-8.5.37.tar.gz
 tar -zxvf apache-tomcat-8.5.37.tar.gz
 mv apache-tomcat-8.5.37 tomcat8
 cd tomcat8/bin
 sudo ./startup.sh
-sudo rm /home/user/apache-tomcat-8.5.37.tar.gz
+sudo rm /home/$userName/apache-tomcat-8.5.37.tar.gz
 cd ../..
 sudo apt-get update
 sudo apt-get -y install autoconf automake build-essential libass-dev libfreetype6-dev libgpac-dev libsdl1.2-dev libtheora-dev libtool libva-dev libvdpau-dev libvorbis-dev libx11-dev libxext-dev libxfixes-dev pkg-config texi2html zlib1g-dev
@@ -78,7 +81,7 @@ echo "MANPATH_MAP $HOME/bin $HOME/ffmpeg_build/share/man" >> ~/.manpath
 . ~/.profile
 sudo apt install ffmpeg
 
-userName="user"
+
 mkdir /home/$userName/tomcat8/webapps/ROOT/dashboard
 cd ../
 cp -r * /home/$userName/tomcat8/webapps/ROOT/dashboard/.
