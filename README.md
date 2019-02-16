@@ -30,10 +30,10 @@ For technical design details, please see the [Design Notes](/readme/Design_Readm
 
 This project welcomes contributions and suggestions. 
 
-If you are interested in fixing issues and contributing directly to the code base, please see the document How to Contribute, which covers the following:
+If you are interested in fixing issues and contributing directly to the code base, please see the document `How to Contribute`, which covers the following:
 
 * [How to build and run from source](/readme/HowToBuild.md)
-* [Submitting pull requests](/readme/PullRequest.md)
+* [How to Contribute](/readme/HowToContribute.md)
 * [Commit message rule](/readme/CommitMessageRule.md)
 * [Development description for contribute](/readme/Dev.md)
 
