@@ -48,7 +48,7 @@ PC1과 PC2에 mptcp kernel을 부팅한다. 먼저 Multi Path 동작 확인의 �
 * [IPSec](/contents/ipsec.md)
 * [Routing example](/contents/routing.md)
 * [Bandwidth](/contents/bandwidth.md)
-* [VM (create more than 5 adapter)](in_vm_create_more_than_5_adapter.md)
+* [VM (create more than 5 adapter)](/contents/in_vm_create_more_than_5_adapter.md)
 
 
 <br/>
