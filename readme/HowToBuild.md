@@ -14,21 +14,21 @@
 
 ### Install MPSec
 
-<pre>
+~~~shell
 $ sudo su
 # cd /home/user/
 # git clone https://github.com/MPSec/Dashboard.git (git으로 다운)
 # cd ./Dashboard/installer/
 # chmod 777 * (shell 프로그램 사용 가능하게 권한 변경)
 # ./set-up.sh (프로그램 실행)
-</pre>
+~~~
 
 
 ### Compile mptcp kernel
 
 > 꽤 많은 시간이 소요됩니다.
 
-<pre>
+~~~shell
 $ sudo su
 # cd /home/user/mptcp (install program을 통해 받은 디렉토리)
 # make mrproper (기존 커널 config 내용 초기화)
@@ -36,20 +36,20 @@ $ sudo su
 # make –j 6 (일반적으로 core 개수 * 1.5배)
 # make modules_install
 # make install
-</pre>
+~~~
 
 ### Change grub to make kernel select at boot time
 
 > 완료 후 아래와 같이 mptcp 커널로 선택하여 부팅합니다. 
 
-<pre>
+~~~shell
 # vi /etc/default/grub (아래 2개 주석처리, 주석은 # 추가)
        GRUB_HIDDEN_TIMEOUT=0
        GRUB_HIDDEN_TIMEOUT_QUIT=true
 # update-grub
 # reboot (재부팅 시 Advanced option for linux 선택 후 4.4.110+ 커널 선택 후 부팅, 버젼 업그레드 될 수 있음!)
 $ dmesg | grep MPTCP (MPTCP 커널로 정상 부팅했는지 확인)
-</pre>
+~~~
 
 
 <img src="/md_images/mptcp-kernel.png" width="500px" height="380px"/>
@@ -89,9 +89,9 @@ $ dmesg | grep MPTCP (MPTCP 커널로 정상 부팅했는지 확인)
 
 ## Start MPSec
 
-<pre>
+~~~shell
 # cd /home/user/Dashboard/installer/
 # ./start-mpsec.sh
-</pre>
+~~~
 
 <img src="/md_images/start-mpsec.gif" width="500px" height="380px"/>

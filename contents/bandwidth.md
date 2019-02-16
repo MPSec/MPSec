@@ -3,7 +3,7 @@
 
 ## (실행 $./bw.sh enp0s8) : 기능 검증용
 
-<pre>
+~~~shell
 #!/bin/bash
 
 INTERVAL="1"  # update interval in seconds
@@ -34,13 +34,13 @@ do
 #      echo "$1 TX $TMBPS Mbits/s RX $RMBPS Mbits/s TOT $TTBPS Mbits/s"
         echo "$TTBPS Mbits/s"
 done
-</pre>
+~~~
 
 <hr>
 
 ## (실행 ./bw1.sh enp0s8) : 1회 측정
 
-<pre>
+~~~shell
 #!/bin/bash
 
 INTERVAL="1"  # update interval in seconds
@@ -68,13 +68,13 @@ IF=$1
         TTBPS=`expr $TMBPS + $RMBPS`
 #       echo "$1 TX $TMBPS Mbits/s RX $RMBPS Mbits/s TOT $TTBPS Mbits/s"
         echo "$TTBPS Mbits/s"
-</pre>
+~~~
 
 <hr>
 
 ## (실행 ./bwloop.sh enp0s8) : 1회 측정을 계속 호출
 
-<pre>
+~~~shell
 #!/bin/bash
 
 INTERVAL="1"  # update interval in seconds
@@ -94,10 +94,11 @@ while true
 do
         ./bw1.sh $1
 done
-</pre>
+~~~
 
 ### 실행 결과
 
+~~~shell
 $ ./bwloop.sh enp0s8<br/>
 293 Mbits/s<br/>
 241 Mbits/s<br/>
@@ -105,6 +106,7 @@ $ ./bwloop.sh enp0s8<br/>
 279 Mbits/s<br/>
 254 Mbits/s<br/>
 292 Mbits/s<br/>
+~~~
 
 <hr>
 
@@ -112,12 +114,7 @@ $ ./bwloop.sh enp0s8<br/>
 
 ## (bw.cpp)
 
-<pre>
-/*
- * MMMP STA : Interface Current Bandwidth Calulation
- * by bgjung@etri.re.kr
- */
-
+~~~shell
 #include <sys/types.h>
 #include <ifaddrs.h>
 #include <stdio.h>
@@ -232,36 +229,35 @@ int main(){
 
     return 0;
 }
-
-</pre>
+~~~
 
 
 ### (컴파일 & 실행)
 
-* $ g++ bw.cpp -o bw
-* $ ./bw
+~~~shell
+$ g++ bw.cpp -o bw
+$ ./bw
 
-Calculate Used Bandwidth on enp0s3 enp0s8 enp0s9 enp0s10<br/>
+Calculate Used Bandwidth on enp0s3 enp0s8 enp0s9 enp0s10
 
+enp0s3: tx 4087.99634 Mbits/sec rx 4.00798 Mbits/sec total 4092.00415 Mbits/sec
 
+enp0s8: tx 2513.61548 Mbits/sec rx 2.73904 Mbits/sec total 2516.35449 Mbits/sec
 
-enp0s3: tx 4087.99634 Mbits/sec rx 4.00798 Mbits/sec total 4092.00415 Mbits/sec<br/>
+enp0s9: tx 1700.78943 Mbits/sec rx 1.62851 Mbits/sec total 1702.41797 Mbits/sec
 
-enp0s8: tx 2513.61548 Mbits/sec rx 2.73904 Mbits/sec total 2516.35449 Mbits/sec<br/>
-
-enp0s9: tx 1700.78943 Mbits/sec rx 1.62851 Mbits/sec total 1702.41797 Mbits/sec<br/>
-
-enp0s10: tx 1373.33081 Mbits/sec rx 1.33254 Mbits/sec total 1374.66345 Mbits/sec<br/>
-
+enp0s10: tx 1373.33081 Mbits/sec rx 1.33254 Mbits/sec total 1374.66345 Mbits/sec
 
 
-enp0s3: tx 3162.38501 Mbits/sec rx 2.44135 Mbits/sec total 3164.82642 Mbits/sec<br/>
 
-enp0s8: tx 2864.00391 Mbits/sec rx 2.88768 Mbits/sec total 2866.89160 Mbits/sec<br/>
+enp0s3: tx 3162.38501 Mbits/sec rx 2.44135 Mbits/sec total 3164.82642 Mbits/sec
 
-enp0s9: tx 2665.40356 Mbits/sec rx 2.70115 Mbits/sec total 2668.10474 Mbits/sec<br/>
+enp0s8: tx 2864.00391 Mbits/sec rx 2.88768 Mbits/sec total 2866.89160 Mbits/sec
 
-enp0s10: tx 2755.54102 Mbits/sec rx 3.05213 Mbits/sec total 2758.59326 Mbits/sec<br/>
+enp0s9: tx 2665.40356 Mbits/sec rx 2.70115 Mbits/sec total 2668.10474 Mbits/sec
+
+enp0s10: tx 2755.54102 Mbits/sec rx 3.05213 Mbits/sec total 2758.59326 Mbits/sec
+~~~
 
 <hr>
 
@@ -269,41 +265,48 @@ enp0s10: tx 2755.54102 Mbits/sec rx 3.05213 Mbits/sec total 2758.59326 Mbits/sec
 
 ## (리눅스 명령어로 확인 방법)
 
-* $ cd /sys/class/net
-* $ ls
+~~~shell
+$ cd /sys/class/net
+$ ls
 
 enp0s10  enp0s3  enp0s8  enp0s9  lo
+~~~
 
-* $ cd enp0s3
-* $ ls
+~~~shell
+$ cd enp0s3
+$ ls
 
 addr_assign_type  device    gro_flush_timeout  name_assign_type  power       tx_queue_len<br/>
 
-address           dev_id    ifalias            netdev_group      proto_down  type<br/>
+address           dev_id    ifalias            netdev_group      proto_down  type
 
-addr_len          dev_port  ifindex            operstate         queues      uevent<br/>
+addr_len          dev_port  ifindex            operstate         queues      uevent
 
-broadcast         dormant   iflink             phys_port_id      speed<br/>
+broadcast         dormant   iflink             phys_port_id      speed
 
-carrier           duplex    link_mode          phys_port_name    statistics<br/>
+carrier           duplex    link_mode          phys_port_name    statistics
 
-carrier_changes   flags     mtu                phys_switch_id    subsystem<br/>
+carrier_changes   flags     mtu                phys_switch_id    subsystem
+~~~
 
-* $ cd statistics/
-* $ ls
+~~~shell
+$ cd statistics/
+$ ls
 
-collisions     rx_dropped        rx_missed_errors   tx_bytes           tx_fifo_errors<br/>
+collisions     rx_dropped        rx_missed_errors   tx_bytes           tx_fifo_errors
 
-multicast      rx_errors         rx_nohandler       tx_carrier_errors  tx_heartbeat_errors<br/>
+multicast      rx_errors         rx_nohandler       tx_carrier_errors  tx_heartbeat_errors
 
-rx_bytes       rx_fifo_errors    rx_over_errors     tx_compressed      tx_packets<br/>
+rx_bytes       rx_fifo_errors    rx_over_errors     tx_compressed      tx_packets
 
-rx_compressed  rx_frame_errors   rx_packets         tx_dropped         tx_window_errors<br/>
+rx_compressed  rx_frame_errors   rx_packets         tx_dropped         tx_window_errors
 
-rx_crc_errors  rx_length_errors  tx_aborted_errors  tx_errors<br/>
+rx_crc_errors  rx_length_errors  tx_aborted_errors  tx_errors
+~~~
 
-* $ cat tx_bytes
+~~~shell
+$ cat tx_bytes
 
 7727659228
-
+~~~
 

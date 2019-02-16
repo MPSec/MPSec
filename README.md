@@ -32,8 +32,8 @@ This project welcomes contributions and suggestions.
 
 If you are interested in fixing issues and contributing directly to the code base, please see the document `How to Contribute`, which covers the following:
 
-* [How to build and run from source](/readme/HowToBuild.md)
 * [How to Contribute](/readme/HowToContribute.md)
+* [How to build and run from source](/readme/HowToBuild.md)
 * [Commit message rule](/readme/CommitMessageRule.md)
 * [Development description for contribute](/readme/Dev.md)
 

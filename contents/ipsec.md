@@ -3,9 +3,9 @@
 
 ### 1) IPSec 설치
 
-<pre>
+~~~shell
 $ sudo apt install strongswan-starter
-</pre>
+~~~
 
 ### 2-1) ipsec  설정 (HOST1)
 
@@ -87,12 +87,12 @@ conn gw21-8
 
 ### 3) IPsec  실행
 
-<pre>
+~~~shell
 $ sudo ipsec start
-</pre>
+~~~
 
 ### 4) IPsec  정지
 
-<pre>
+~~~shell
 $ sudo ipsec stop
-</pre>
+~~~
