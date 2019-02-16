@@ -61,7 +61,7 @@ $ dmesg | grep MPTCP (MPTCP 커널로 정상 부팅했는지 확인)
 
 ### Overview
 
-> [Details readme](./Design_Readme.md)
+> [Details project readme](./Project_Readme.md)
 
 ![set](/md_images/overview.png)
 

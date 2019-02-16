@@ -1,7 +1,7 @@
 
 # MPSec
 
-## 프로젝트의 목적
+## Project Purpose
 `MPSec(Multipath Security)`는 다중 경로 전송 기술인 mptcp 프로토콜을 활용하여 네트워크 장애 상황에 효과적으로 대처가 가능한 고신뢰 네트워킹을 제공한다.
 
 
@@ -9,7 +9,7 @@
 
 <br/>
 
-## 핵심 기능
+## Key Features
 핵심 기능으로는 크게 6가지가 있다. 
 * 다중 경로 전송을 통해 장애 상황에 네트워크가 끊기지 않게 네트워크의 생존성을 증가해준다. 
 * 비슷한 대역폭으로 여러 개의 경로를 통해 데이터를 전송할 시 2개의 대역폭 당 약 1.8배의 속도로 데이터를 전달한다. 
@@ -23,17 +23,17 @@
 
 <br/>
 
-## 주요 사용지
-### 첫 번째 예시
+## Examples of use
+### Army
 군대와 같이 중요한 서버가 있으며 네트워크가 끊겨서는 안 되는 장소에서, 다중 경로 전송을 통해 만약 하나의 인터페이스가 끊겨도 다른 인터페이스로 데이터를 전송함으로써 네트워크의 생존성을 증가시킬 수 있다. 또한 `IPSec`을 통해 보안이 중요한 군시설에 Packet의 내용을 볼 수 없도록 할 수 있다. 
 
-### 두 번째 예시
+### High-definition streaming
 고화질 영상의 경우 빠르고 안정적인 데이터 전송을 유지해야한다. `MPTCP`를 이용해 여러 개의 인터페이스를 연결하여 빠르고 끊기지 않게 영상을 전송할 수 있다.
 
 
 <br/>
 
-## TestBed 환경 설명
+## TestBed
 
 ![testbed](/md_images/testSet.png)
 
@@ -43,7 +43,17 @@ PC1과 PC2에 mptcp kernel을 부팅한다. 먼저 Multi Path 동작 확인의 �
 
 <br/>
 
-## 기대효과
+## Good documentation for additional reference
+
+* [IPSec](/contents/ipsec.md)
+* [Routing example](/contents/routing.md)
+* [Bandwidth](/contents/bandwidth.md)
+* [VM (create more than 5 adapter)](in_vm_create_more_than_5_adapter.md)
+
+
+<br/>
+
+## Benefit (정리중)
 
 ### mptcp
 * 대체 경로 서비스 (생존성 증가)
