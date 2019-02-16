@@ -20,9 +20,7 @@ Please check Project details for more information.
 
 ## Project details
 
-For details on project structure and build process, please see the [Project Readme](/readme/Project_Readme.md).
-
-For technical design details, please see the [Design Notes](/readme/Design_Readme.md).
+For details on project structure and technical design, please see the [Project Readme](/readme/Project_Readme.md).
 
 
 
