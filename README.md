@@ -54,9 +54,6 @@ If you are interested in fixing issues and contributing directly to the code bas
 
 > Just Run
 
-<p align="center">
-   <img src="/md_images/set-up.gif" width="740px" height="383px"/>
-</p>
 
 ### Start MPSec
 
