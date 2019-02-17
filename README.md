@@ -50,9 +50,17 @@ If you are interested in fixing issues and contributing directly to the code bas
 
 ## Demo
 
+### Set Up MPSec
+
+> Just Run
+
+<p align="center">
+   <img src="/md_images/set-up.gif" width="740px" height="383px"/>
+</p>
+
 ### Start MPSec
 
-> Only Run
+> Just Run
 
 <p align="center">
    <img src="/md_images/start_mpsec.gif" width="740px" height="383px"/>

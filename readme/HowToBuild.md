@@ -24,6 +24,12 @@ $ sudo su
 ~~~
 
 
+<p align="center">
+   <img src="/md_images/set-up.gif" width="740px" height="383px"/>
+</p>
+
+<br/>
+
 ### Compile mptcp kernel
 
 > 꽤 많은 시간이 소요됩니다.
