@@ -15,7 +15,7 @@ In addition, it has the following additional functions.
 * Compatibility is good because it is possible to communicate with tcp protocol.
 
 <p align="center">
-   <img src="/md_images/start_mpsec.gif"/>
+   <img src="/md_images/start_mpsec.gif" width="740px" height="383px"/>
 </p>
 
 Please check Project details for more information.

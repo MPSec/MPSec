@@ -7,17 +7,21 @@ IF=$1
 
 while true
 do
-        wget ftp://user:1@192.168.10.2/file1 
+        wget ftp://user:1@192.168.10.2/file1
+        cp file1 /home/user/tomcat8/webapps/ROOT/dashboard/ipsec-sh/
 	sleep $INTERVAL
         wget ftp://user:1@192.168.10.2/file2
+        cp file2 /home/user/tomcat8/webapps/ROOT/dashboard/ipsec-sh/
 	sleep $INTERVAL
         wget ftp://user:1@192.168.10.2/file3
+        cp file3 /home/user/tomcat8/webapps/ROOT/dashboard/ipsec-sh/
 	sleep $INTERVAL
         wget ftp://user:1@192.168.10.2/file4
+        cp file4 /home/user/tomcat8/webapps/ROOT/dashboard/ipsec-sh/
         sleep $INTERVAL
-        rm file1.*
-        rm file2.*
-        rm file3.*
-        rm file4.*
+        rm /home/user/tomcat8/webapps/ROOT/dashboard/ipsec-sh/file1.*
+        rm /home/user/tomcat8/webapps/ROOT/dashboard/ipsec-sh/file2.*
+        rm /home/user/tomcat8/webapps/ROOT/dashboard/ipsec-sh/file3.*
+        rm /home/user/tomcat8/webapps/ROOT/dashboard/ipsec-sh/file4.*
 	sleep $INTERVAL
 done
