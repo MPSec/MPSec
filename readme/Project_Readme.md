@@ -52,19 +52,46 @@ PC1과 PC2에 mptcp kernel을 부팅한다. 먼저 Multi Path 동작 확인의 �
 * [VM (create more than 5 adapter)](/contents/in_vm_create_more_than_5_adapter.md)
 
 
+
 <br/>
 
-## Benefit (정리중)
+## `MPTCP` protocol analysis
 
-### mptcp
-* 대체 경로 서비스 (생존성 증가)
-* 다중 경로 전송 서비스 (속도 증가)
-* 기존 TCP 프로토콜과의 호환성
+### `MPTCP` Structure
 
-전문가가 아니라면 사용하는 방법이 너무 어려움...  `그렇기 때문에 mpsec 사용`
+`MPTCP`는 전송계층 프로토콜의 한 종류로  사용자와 서버 사이에 2가지 이상의 네트워킹 인터페이스를 활용하여 하나의 `TCP` 스트림을 다중 경로로 전송하는 전송 계층의 프로토콜을 의미한다. 이때 각각의 네트워킹 인터페이스로 나뉘어진 `TCP` 스트림은 `subflow`라 부른다.
 
-### mpsec
-* dashboard를 통한 효과적인 네트워크 관리
-* installer를 통한 쉬운 환경 구성
-* ipsec을 통한 데이터 보안 기능 제공
+하나의 어플리케이션은 `MPTCP`를 활용하여 여러 개의 `TCP subflow`를 생성하고 생성된 `subflow`들로 동시에 전송하여 데이터 전송률을 높이거나 번갈아가며 사용하여 인터페이스의 부하를 줄일 수 있다. 또한 `MPTCP`는 기존 `TCP Header`의 옵션 필드를 활용하여 사용자-서버 간 `MPTCP` 제어 데이터를 송수신하기 때문에 `MPTCP`가 설치되있지 않은 단말이더라도 `TCP`로 인식하여 처리하기 때문에 호환성이 뛰어나다고 할 수 있다.
+
+### MPTCP features
+
+#### Path-Manager
+
+`MPTCP Path-Manager`는 사용자-서버 간의 **다중 경로 생성**에 있어 어떠한 방식으로 다중 경로를 생성할지를 결정하는 기능으로 크게 3가지의 설정 방법을 제공한다.
+
+* `default – default` 방식은 MPTCP를 사용하지 않는 일반적인 단일 경로 전송 방식으로 단말이 자기가 가진 인터페이스 정보와 이를 통해 만들 수 있는 subflow 정보를 전달하지 않는다.
+* `fullmesh – fullmesh` 방식은 MPTCP에서 가장 많이 사용되는 방식으로 사용자가 가진 인터페이스의 개수와 서버가 가진 인터페이스의 개수를 조합하여 모든 경우의 수로 가는 다중 경로를 생성하는 방식이다.
+* `ndiffports – ndiffports` 방식은 기존의 하나의 인터페이스만을 사용하여 통신하는 환경에서 송신측 단말의 TCP 포트를 여러 개 생성하여 가상으로 다중 경로를 생성하는 방식이다.
+
+#### Scheduler
+
+`MPTCP Scheduler`는 `Path-Manager`를 통해 사용자-서버 사이에 생성된 **다중 경로 중 어떠한 경로를 선택**하여 데이터를 전송할지 결정하는 기능으로 크게 3 가지의 설정 방법을 제공한다.
+
+* `default – default` 스케줄러는 MPTCP에서 가장 많이 사용되는 스케줄러로 여러 가지 subflow 중 가장 RTT가 적은 subflow를 선택하여 해당 subflow의 congestion window가 가득 찰 때까지 데이터를 전송한다. 만약 선택된 subflow의 congestion window가 가득 찬 경우 그 다음 적은 RTT를 가지는 subflow를 선택하여 데이터를 전송한다. 
+* `roundrobin – roundrobin` 스케줄러는 존재하는 모든 subflow에 설정된 TCP segment 수에 따라 순차적으로 데이터를 전송하는 방식으로 인터페이스 별 부하분산 기능을 극대화하여 사용할 때 주로 사용한다.
+* `redundant – redundant` 스케줄러는 생성된 모든 subflow에 동일한 데이터를 중복적으로 송신하는 방식으로 이를 수신한 단말에서는 수신한 각 패킷의 sequence number와 time stamp 값을 비교하여 동일 데이터 중 먼저 수신한 데이터를 가지고 이후에 들어오는 데이터는 버리는 방식으로 동작하며 가용 가능한 네트워크 대역폭을 희생하여 신뢰성을 보장하는 서비스를 사용하고자 할 때 주로 사용한다.
+
+#### Congestion Control
+
+`MPTCP Congestion Control`는 기존 TCP의 Congestion Control과 유사한 기능을 담당한다. 하지만 기존 TCP Congestion Control은 하나의 경로에 대한 congestion window size를 계산하는 Uncoupled 방식의 알고리즘으로 여러 subflow를 가지는 MPTCP 환경에서 사용하기 적절하지 않다. 따라서 MPTCP Congestion Control은 MPTCP Scheduler의 결정을 보다 효율적으로 하기 위해 congestion window size 계산 시 가용 가능한 모든 subflow의 상황을 보며 window size를 결정하는 Coupled 방식의 알고리즘을 제공한다. 제공하는 알고리즘은 크게 4가지가 있다.
+
+* LIA (Linked Increase Algorithm)
+* OLIA (Opportunistic Linked Increase Algorithm)
+* wVegas (Delay-based Congestion Control for MPTCP)
+* BALIA (Balanced Linked Adaptation Congestion Control Algorithm)
+
+#### Reordering
+
+`MPTCP Reordering` 기능은 여러 subflow로 전송한 데이터를 수신한 단말이 이를 원상복구 시키기 위해 데이터 재조립을 사용한다. 
+
 
