@@ -28,11 +28,10 @@ For details on project structure and technical design, please see the [Project R
 
 This project welcomes contributions and suggestions. 
 
-If you are interested in fixing issues and contributing directly to the code base, please see the document `How to Contribute`, which covers the following:
+If you are interested in fixing issues and contributing directly to the code base, please see the document below.
 
 * [How to Contribute](/readme/HowToContribute.md)
 * [How to build and run from source](/readme/HowToBuild.md)
-* [Commit message rule](/readme/CommitMessageRule.md)
 * [Development description for contribute](/readme/Dev.md)
 
 

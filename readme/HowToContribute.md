@@ -30,6 +30,31 @@ To improve the chances to get a pull request merged you should select an issue t
 
 To avoid multiple pull requests resolving the same issue, **let others know you are working on it by saying so in a comment.**
 
+
+## Commit message rule
+
+Please follow the [commit message guidelines.](https://github.com/erlang/otp/wiki/writing-good-commit-messages)
+
+~~~
+Short (50 chars or less) summary of changes
+
+More detailed explanatory text, if necessary.  Wrap it to about 72
+characters or so.  In some contexts, the first line is treated as the
+subject of an email and the rest of the text as the body.  The blank
+line separating the summary from the body is critical (unless you omit
+the body entirely); tools like rebase can get confused if you run the
+two together.
+
+Further paragraphs come after blank lines.
+
+  - Bullet points are okay, too
+
+  - Typically a hyphen or asterisk is used for the bullet, preceded by a
+    single space, with blank lines in between, but conventions vary here
+~~~
+
+
+
 ## Suggestions
 
 We're also interested in your feedback for the future of Code. You can submit a suggestion or feature request through the issue tracker. To make this process more effective, we're asking that these include more information to help define them more clearly.
