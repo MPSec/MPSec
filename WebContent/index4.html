@@ -28,6 +28,104 @@
 
     <!-- Custom Theme Style -->
     <link href="build/css/custom.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.1/Chart.bundle.min.js"></script>
+    <style>
+      th {
+        text-align: center;
+      },
+      div > span{
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+    <script>
+    var cpusage_DoughnutChart, cpuload_DoughnutChart, memusage_DoughnutChart;
+    cpusage_data = {
+      labels: [
+                "cpu usage"
+            ],
+    datasets: [{
+        data: [10,30],
+        backgroundColor: [
+                      "#3ec556",
+                      "rgba(0,0,0,0)"
+                  ],
+        hoverBackgroundColor: [
+                  "#3ec556",
+                  "rgba(0,0,0,0)"
+        ],
+        borderWidth: [
+          0, 0
+        ]
+    }],
+
+    }
+    $(document).ready(function() {
+        cpusage_DoughnutChart = new Chart($(cpusage_doughnut), {
+          type: 'doughnut',
+          data: cpusage_data,
+
+        });
+     });
+
+
+
+     cpuload_data = {
+       labels: [
+                 "cpu load"
+             ],
+     datasets: [{
+         data: [10,30],
+         backgroundColor: [
+                       "#A2CBBB",
+                       "rgba(0,0,0,0)"
+                   ],
+         hoverBackgroundColor: [
+                    "#A2CBBB",
+                   "rgba(0,0,0,0)"
+         ],
+         borderWidth: [
+           0, 0
+         ]
+     }],
+
+     }
+     $(document).ready(function() {
+         cpuload_DoughnutChart = new Chart($(cpuload_doughnut), {
+           type: 'doughnut',
+           data: cpuload_data
+         });
+      });
+
+       memusage_data = {
+         labels: [
+                   "memory usage"
+               ],
+       datasets: [{
+           data: [10,30],
+           backgroundColor: [
+                         "#20639B",
+                         "rgba(0,0,0,0)"
+                     ],
+           hoverBackgroundColor: [
+                     "#20639B",
+                     "rgba(0,0,0,0)"
+           ],
+           borderWidth: [
+             0, 0
+           ]
+       }],
+
+       }
+       $(document).ready(function() {
+           memusage_DoughnutChart = new Chart($(memusage_doughnut), {
+             type: 'doughnut',
+             data: memusage_data
+           });
+        });
+    </script>
   </head>
 
   <body class="nav-md">
@@ -279,197 +377,101 @@
         <!-- page content  top tiles  +  (up(2) + down(3)) -->
         <div class="right_col" role="main">
 
-        <!-- start top tiles -->
-        <!-- <div class="row tile_count">
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
-              <div class="count">2500</div>
-              <span class="count_bottom"><i class="green">4% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
-              <div class="count">123.50</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
-              <div class="count green">2,500</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
-              <div class="count">4,567</div>
-              <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
-              <div class="count">2,315</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
-              <div class="count">7,325</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-            </div>
-          </div> -->
-         <!-- end top tiles  -->
+
 
 		<!-- start up content (2) -->
 		  <div class="row">
               <div class="col-md-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Traffic with Multi-Media, Multi-Path <small>SP, MP Test</small></h2>
+                    <h2>System Status</h2>
                     <div class="clearfix"></div>
                   </div>
 
                   <div class="x_content">
-                  <!-- 1 동영상 -->
-                    <div class="col-md-10 col-sm-12 col-xs-12">
-                      <div class="demo-container" style=" height:380px; background-color:#EFFBFB;">
-            						<center>
-            						<video id="my_client_video" preload="none" controls class="demo-placeholder" style="width:100%; height:380px;">
-            						    <source src="http://localhost:12390/test1.webm" type="video/mp4" /> <!-- MPSec change -->
-            						</video>
-            						</center>
-                      </div>
-                    </div>
-                  <!-- 2 버튼 -->
-                    <div class="col-md-2 col-sm-12 col-xs-12">
-                      <div>
-                       <center>
-                        <ul class="list-unstyled top_profiles scroll-view">
-                          <li class="media event">
-				                        <button type="button" class="btn btn-default btn-lg" onclick="httpGetAsync('./jsp/start.jsp', myCallBack) ">Start</button>
-                          </li>
-                          <li class="media event">
-				                        <button type="button" class="btn btn-default btn-lg" onclick="play()">Play</button>
-                          </li>
-                          <li class="media event">
-				                        <button type="button" class="btn btn-default btn-lg" onclick="httpGetAsync('./jsp/stop.jsp', myCallBack) ">Stop</button>
-                          </li>
-                          <li>
-                            <div class="btn-group">
-                            <button data-toggle="dropdown" class="btn btn-default btn-lg dropdown-toggle" type="button" aria-expanded="false">IP Up &nbsp;<span class="caret"></span>
-                            </button>
-                            <ul role="menu" class="dropdown-menu">
-                              <li><a id="if-up1" onclick="httpGetAsync('./jsp/ifup.jsp', myCallBack)" >Primary Interface1</a>
-                              </li>
-                              <li class="divider"></li>
-                              <li><a id="if-up2" onclick="httpGetAsync('./jsp/ifup.jsp', myCallBack)">Interface2</a>
-                              </li>
-                              <li><a id="if-up3" onclick="httpGetAsync('./jsp/ifup.jsp', myCallBack)">Interface3</a>
-                              </li>
-                              <li><a id="if-up4" onclick="httpGetAsync('./jsp/ifup.jsp', myCallBack)">Interface4</a>
-                              </li>
-                            </ul>
-                            </div>
-                            <div class="btn-group">
-                            <button data-toggle="dropdown" class="btn btn-default btn-lg dropdown-toggle" type="button" aria-expanded="false">IP Down &nbsp;<span class="caret"></span>
-                            </button>
-                            <ul role="menu" class="dropdown-menu">
-                              <li><a id="if-down1" onclick="httpGetAsync('./jsp/ifdown.jsp', myCallBack)" >Primary Interface1</a>
-                              </li>
-                              <li class="divider"></li>
-                              <li><a id="if-down2" onclick="httpGetAsync('./jsp/ifdown.jsp', myCallBack)">Interface2</a>
-                              </li>
-                              <li><a id="if-down3" onclick="httpGetAsync('./jsp/ifdown.jsp', myCallBack)">Interface3</a>
-                              </li>
-                              <li><a id="if-down4" onclick="httpGetAsync('./jsp/ifdown.jsp', myCallBack)">Interface4</a>
-                              </li>
-                            </ul>
-                            </div>
-                          </li>
-                          <li class="media event">
-                                 <button type="button" class="btn btn-default btn-lg" onclick="httpGetAsync('./jsp/mptcp-on.jsp', myCallBack) ">MP ON</button>
-                          </li>
-                          <li class="media event">
-                                 <button type="button" class="btn btn-default btn-lg" onclick="httpGetAsync('./jsp/mptcp-off.jsp', myCallBack) ">MP OFF</button>
-                          </li>
-                        </ul>
-                       </center>
-                      </div>
-                    </div>
+					<div class = "col-md-4">
+					<h2>cpusage</h2>
+            <canvas id="cpusage_doughnut" height="230" width="680"></canvas>
+
+						<div class = "col-md-12">
+              <center>
+							<span id="cpusage">1</span>%
+              </center>
+						</div>
+					</div>
+					<div class = "col-md-4">
+					<h2>cpuload</h2>
+          <canvas id="cpuload_doughnut" height="230" width="680"></canvas>
+						<div class = "col-md-12">
+              <center>
+							<span id="cpuload">1</span>%
+              </center>
+						</div>
+					</div>
+					<div class = "col-md-4">
+					<h2>memusage</h2>
+          <canvas id="memusage_doughnut" height="230" width="680"></canvas>
+						<div class = "col-md-12">
+              <center>
+							<span id="memusage">1</span>%
+            </center>
+						</div>
+					</div>
                   </div>
+
+				  <div class="x_content">
+            <div class = "col-md-6">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>taskcount</th>
+                    <th><span id="taskcount">1</span></th>
+                  </tr>
+                </thead>
+
+                <thead>
+                  <tr>
+                    <th>sessioncount</th>
+                    <th><span id="taskcount">1</span></th>
+                  </tr>
+                </thead>
+
+                <thead>
+                  <tr>
+                    <th>hostip</th>
+                    <th><span id="hostip">1</span></th>
+                  </tr>
+                </thead>
+
+                <thead>
+                  <tr>
+                    <th>hostname</th>
+                    <th><span id="hostname">1</span></th>
+                  </tr>
+                </thead>
+
+                <thead>
+                  <tr>
+                    <th>date</th>
+                    <th><span id="date">1</span></th>
+                  </tr>
+                </thead>
+
+              </table>
+            </div>
+            <div class = "col-md-6">
+              <h2>netifinfo</h2>
+    						<div class = "col-md-12">
+    							<div id="netifinfo">1</div>
+    						</div>
+            </div>
+
+                  </div>
+
                 </div>
               </div>
             </div>
           <!-- end up content (2) -->
-
-		  <!-- start down content  (2), (2) -->
-          <div class="row">
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Interface 1 &nbsp;<span id="interfaceName1">enp0s8, tx+rx</span></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><h2 class="control-label">Speed &nbsp; </h2>
-                        <h2 id="BW1" class="control-label"> 0 </h2><h2>Mbit/s</h2></li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                  	<!-- 그래프 넣기 -->
-                    <canvas id="lineChart"></canvas>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Interface 2 &nbsp;<span id="interfaceName2">enp0s9, tx+rx</span></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><h2 class="control-label">Speed &nbsp; </h2>
-                        <h2 id="BW2" class="control-label"> 0 </h2><h2>Mbit/s</h2></li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                  	<!-- 그래프 넣기 -->
-                    <canvas id="lineChart2"></canvas>
-                  </div>
-                </div>
-              </div>
-          </div>
-
-          <!-- start down content  (2), (2) -->
-              <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="x_panel">
-                      <div class="x_title">
-                        <h2>Interface 3 &nbsp;<span id="interfaceName3">enp0s8, tx+rx</span></h2>
-                        <ul class="nav navbar-right panel_toolbox">
-                          <li><h2 class="control-label">Speed &nbsp; </h2>
-                            <h2 id="BW3" class="control-label"> 0 </h2><h2>Mbit/s</h2></li>
-                        </ul>
-                        <div class="clearfix"></div>
-                      </div>
-                      <div class="x_content">
-                      	<!-- 그래프 넣기 -->
-                        <canvas id="lineChart3"></canvas>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="x_panel">
-                      <div class="x_title">
-                        <h2>Interface 4 &nbsp;<span id="interfaceName4">enp0s9, tx+rx</span></h2>
-                        <ul class="nav navbar-right panel_toolbox">
-                          <li><h2 class="control-label">Speed &nbsp; </h2>
-                            <h2 id="BW4" class="control-label"> 0 </h2><h2>Mbit/s</h2></li>
-                        </ul>
-                        <div class="clearfix"></div>
-                      </div>
-                      <div class="x_content">
-                      	<!-- 그래프 넣기 -->
-                        <canvas id="lineChart4"></canvas>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-		  <!-- end down content  (2), (2) -->
 
 
         </div>
