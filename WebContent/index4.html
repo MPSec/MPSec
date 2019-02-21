@@ -74,7 +74,7 @@
 
      cpuload_data = {
        labels: [
-                 "cpu load"
+                 "load average"
              ],
      datasets: [{
          data: [10,30],
@@ -400,7 +400,7 @@
 						</div>
 					</div>
 					<div class = "col-md-4">
-					<h2>cpuload</h2>
+					<h2>load average</h2>
           <canvas id="cpuload_doughnut" height="230" width="680"></canvas>
 						<div class = "col-md-12">
               <center>
@@ -417,7 +417,7 @@
             </center>
 						</div>
 					</div>
-                  </div>
+          </div>
 
 				  <div class="x_content">
             <div class = "col-md-6">
@@ -459,11 +459,52 @@
 
               </table>
             </div>
+
             <div class = "col-md-6">
-              <h2>netifinfo</h2>
-    						<div class = "col-md-12">
-    							<div id="netifinfo">1</div>
-    						</div>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>ifindex</th>
+                    <th><span id="taskcount">ifindex</span></th>
+                  </tr>
+                </thead>
+
+                <thead>
+                  <tr>
+                    <th>ifname</th>
+                    <th><span id="taskcount">ifname</span></th>
+                  </tr>
+                </thead>
+
+                <thead>
+                  <tr>
+                    <th>hwaddr</th>
+                    <th><span id="hostip">hwaddr</span></th>
+                  </tr>
+                </thead>
+
+                <thead>
+                  <tr>
+                    <th>inetaddr</th>
+                    <th><span id="hostname">inetaddr</span></th>
+                  </tr>
+                </thead>
+
+                <thead>
+                  <tr>
+                    <th>linkspeed</th>
+                    <th><span id="date">linkspeed</span></th>
+                  </tr>                  
+                </thead>
+                <thead>
+                  <tr>
+                    <th>oeprstate</th>
+                    <th><span id="date">oeprstate</span></th>
+                  </tr>                  
+                </thead>
+                
+
+              </table>
             </div>
 
                   </div>

@@ -18,7 +18,7 @@ int main()
 //    std::cout << "load average : " << m15  << std::endl;
 
     core = std::thread::hardware_concurrency();
-    m15 *= 100;
+    m15 *= 10;
     cpuload = m15/core;
 
 //    std::cout << "core : " << core << std::endl;
