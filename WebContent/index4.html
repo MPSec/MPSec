@@ -374,13 +374,9 @@
         </div>
         <!-- /top navigation -->
 
-        <!-- page content  top tiles  +  (up(2) + down(3)) -->
+        <!-- page content  top tiles  +  (up(3) + center(2, 3), down(interface counts)) -->
         <div class="right_col" role="main">
-
-
-
-		<!-- start up content (2) -->
-		  <div class="row">
+          <div class="row">
               <div class="col-md-12">
                 <div class="x_panel">
                   <div class="x_title">
@@ -388,135 +384,147 @@
                     <div class="clearfix"></div>
                   </div>
 
+                  <!-- start up graph  (3) -->
                   <div class="x_content">
-					<div class = "col-md-4">
-					<h2>cpusage</h2>
-            <canvas id="cpusage_doughnut" height="230" width="680"></canvas>
+                    <div class = "col-md-4">
+                      <h2>cpusage</h2>
+                      <canvas id="cpusage_doughnut" height="230" width="680"></canvas>
+                      <div class = "col-md-12">
+                        <center>
+                        <span id="cpusage">1</span>%
+                        </center>
+                      </div>
+                    </div>
+                    <div class = "col-md-4">
+                      <h2>load average</h2>
+                      <canvas id="cpuload_doughnut" height="230" width="680"></canvas>
+                        <div class = "col-md-12">
+                          <center>
+                          <span id="cpuload">1</span>%
+                          </center>
+                        </div>
+                    </div>
+                    <div class = "col-md-4">
+                      <h2>memusage</h2>
+                      <canvas id="memusage_doughnut" height="230" width="680"></canvas>
+                        <div class = "col-md-12">
+                          <center>
+                          <span id="memusage">1</span>%
+                          </center>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end up graph  (3) -->
 
-						<div class = "col-md-12">
-              <center>
-							<span id="cpusage">1</span>%
-              </center>
-						</div>
-					</div>
-					<div class = "col-md-4">
-					<h2>load average</h2>
-          <canvas id="cpuload_doughnut" height="230" width="680"></canvas>
-						<div class = "col-md-12">
-              <center>
-							<span id="cpuload">1</span>%
-              </center>
-						</div>
-					</div>
-					<div class = "col-md-4">
-					<h2>memusage</h2>
-          <canvas id="memusage_doughnut" height="230" width="680"></canvas>
-						<div class = "col-md-12">
-              <center>
-							<span id="memusage">1</span>%
-            </center>
-						</div>
-					</div>
-          </div>
+                    <!-- start center content  (2, 3) -->
+                    <div class="x_content">
+                      <!-- start table (2) -->
+                      <div class = "col-md-6">
+                        <h2>task, session count</h2>
+                        <table class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th>taskcount</th>
+                              <th><span id="taskcount">1</span></th>
+                            </tr>
+                          </thead>
 
-				  <div class="x_content">
-            <div class = "col-md-6">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>taskcount</th>
-                    <th><span id="taskcount">1</span></th>
-                  </tr>
-                </thead>
+                          <thead>
+                            <tr>
+                              <th>sessioncount</th>
+                              <th><span id="taskcount">1</span></th>
+                            </tr>
+                          </thead>
+                        </table>
+                      </div>
+                      <!-- end table (2) -->
 
-                <thead>
-                  <tr>
-                    <th>sessioncount</th>
-                    <th><span id="taskcount">1</span></th>
-                  </tr>
-                </thead>
+                      <!-- start table (3) -->
+                      <div class = "col-md-6">
+                        <h2>host info</h2>
+                        <table class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th>hostip</th>
+                              <th><span id="hostip">1</span></th>
+                            </tr>
+                          </thead>
+                          <thead>
+                            <tr>
+                              <th>hostname</th>
+                              <th><span id="hostname">1</span></th>
+                            </tr>
+                          </thead>
+                          <thead>
+                            <tr>
+                              <th>date</th>
+                              <th><span id="date">1</span></th>
+                            </tr>
+                          </thead>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- end table (3) -->
+                    <!-- end center content  (2, 3) -->
 
-                <thead>
-                  <tr>
-                    <th>hostip</th>
-                    <th><span id="hostip">1</span></th>
-                  </tr>
-                </thead>
+                    <!-- start down content  (interface counts) -->
+                    <!-- start table -->
+                    <div class="x_content">
+                      <div class = "col-md-6">
+                        <h2>netifinfo</h2>
+                        <table class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th>ifindex</th>
+                              <th><span id="taskcount">ifindex</span></th>
+                            </tr>
+                          </thead>
 
-                <thead>
-                  <tr>
-                    <th>hostname</th>
-                    <th><span id="hostname">1</span></th>
-                  </tr>
-                </thead>
+                          <thead>
+                            <tr>
+                              <th>ifname</th>
+                              <th><span id="taskcount">ifname</span></th>
+                            </tr>
+                          </thead>
 
-                <thead>
-                  <tr>
-                    <th>date</th>
-                    <th><span id="date">1</span></th>
-                  </tr>
-                </thead>
+                          <thead>
+                            <tr>
+                              <th>hwaddr</th>
+                              <th><span id="hostip">hwaddr</span></th>
+                            </tr>
+                          </thead>
 
-              </table>
-            </div>
+                          <thead>
+                            <tr>
+                              <th>inetaddr</th>
+                              <th><span id="hostname">inetaddr</span></th>
+                            </tr>
+                          </thead>
 
-            <div class = "col-md-6">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>ifindex</th>
-                    <th><span id="taskcount">ifindex</span></th>
-                  </tr>
-                </thead>
-
-                <thead>
-                  <tr>
-                    <th>ifname</th>
-                    <th><span id="taskcount">ifname</span></th>
-                  </tr>
-                </thead>
-
-                <thead>
-                  <tr>
-                    <th>hwaddr</th>
-                    <th><span id="hostip">hwaddr</span></th>
-                  </tr>
-                </thead>
-
-                <thead>
-                  <tr>
-                    <th>inetaddr</th>
-                    <th><span id="hostname">inetaddr</span></th>
-                  </tr>
-                </thead>
-
-                <thead>
-                  <tr>
-                    <th>linkspeed</th>
-                    <th><span id="date">linkspeed</span></th>
-                  </tr>                  
-                </thead>
-                <thead>
-                  <tr>
-                    <th>oeprstate</th>
-                    <th><span id="date">oeprstate</span></th>
-                  </tr>                  
-                </thead>
-                
-
-              </table>
-            </div>
+                          <thead>
+                            <tr>
+                              <th>linkspeed</th>
+                              <th><span id="date">linkspeed</span></th>
+                            </tr>                  
+                          </thead>
+                          <thead>
+                            <tr>
+                              <th>oeprstate</th>
+                              <th><span id="date">oeprstate</span></th>
+                            </tr>                  
+                          </thead>                
+                        </table>
+                      </div>
+                    </div>
+                    <!-- end table -->
+                    <!-- end down content  (interface counts) -->
 
                   </div>
-
                 </div>
               </div>
-            </div>
-          <!-- end up content (2) -->
-
-
+          </div>
         </div>
-        <!-- end page content  (up(2) + down(2),(2))  -->
+        <!-- page content  top tiles  +  (up(3) + center(2, 3), down(interface counts)) -->
 
 
 
