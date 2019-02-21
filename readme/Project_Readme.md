@@ -36,7 +36,7 @@
 
 <br/>
 
-## TestBed
+## Example testBed
 
 ![testbed](/md_images/testSet.png)
 
