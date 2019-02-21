@@ -118,7 +118,7 @@ int main(void){
       tmp2++;
 		*/
     for (i=0; i<ifcnt; i++) {
-      printf("%d$$$%s$$$%s$$$%s$$$%s$$$%d$$$%s***",
+      printf("%d@@@%s@@@%s@@@%s@@@%s@@@%d@@@%s***",
 				tmp2->ifindex,tmp2->ifname,
         tmp2->hwaddr, tmp2->inetaddr, tmp2->netmask,
         tmp2->linkspeed, tmp2->operstatus);
