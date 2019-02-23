@@ -84,6 +84,8 @@ If you are interested in fixing issues and contributing directly to the code bas
 
 ### System Config
 
+> Real-time system config monitoring
+
 <p align="center">
    <img src="/md_images/system.gif" width="740px" height="383px"/>
 </p>
