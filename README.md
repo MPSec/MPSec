@@ -1,7 +1,7 @@
 # MPSec
 
 [![Language](https://img.shields.io/badge/NaverFest-Finalist-brightgreen.svg)](https://github.com/D2CampusFest/6th)
-[![](https://img.shields.io/github/issues-pr/MPSec/Dashboard.svg?colorB=orange)](https://github.com/MPSec/Dashboard/pulls)
+[![](https://img.shields.io/github/issues-pr/MPSec/MPSec.svg?colorB=orange)](https://github.com/MPSec/MPSec/pulls)
 [![PR's Welcome](https://img.shields.io/badge/PRs%20-welcome-brightgreen.svg?colorB=yellow)](#contributing)
 
 
