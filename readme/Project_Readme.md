@@ -38,7 +38,7 @@
 
 ## Flow Overview (Install, Set-Up, Start)
 
-![flow](/md_images/flow.png)
+![flow](/md_images/flow1.png)
 
 
 
