@@ -10,7 +10,7 @@ MPSec(Multipath Security) uses [mptcp protocol](https://github.com/multipath-tcp
 In addition, it has the following additional functions.
 * **Environment configuration is simply available through [installer](https://github.com/MPSec/Dashboard/blob/master/readme/HowToBuild.md).**
 * Real-time monitoring using `Dashboard` enables users to manage effectively.
-* Packets are encrypted by using `IPSec`.
+* Packets are encrypted by `IPSec`.
 * Network speed is improved when communicating with similar bandwidth.
 * Compatibility is good because it is possible to communicate with tcp protocol.
 
