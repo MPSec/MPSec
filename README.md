@@ -1,8 +1,8 @@
 # MPSec
 
 [![Language](https://img.shields.io/badge/NaverFest-Finalist-brightgreen.svg)](https://github.com/D2CampusFest/6th)
-[![](https://img.shields.io/github/issues-pr/MPSec/MPSec.svg?colorB=orange)](https://github.com/MPSec/MPSec/pulls)
-[![PR's Welcome](https://img.shields.io/badge/PRs%20-welcome-brightgreen.svg?colorB=yellow)](#contributing)
+[![GitHub issues](https://img.shields.io/github/issues/MPSec/MPSec.svg)](https://github.com/MPSec/MPSec/issues)
+[![PR's Welcome](https://img.shields.io/badge/PRs%20-welcome-brightgreen.svg?colorB=orange)](#contributing)
 
 
 MPSec(Multipath Security) uses [mptcp protocol](https://github.com/multipath-tcp/mptcp), a multi-path transmission technology, to provide highly reliable networking that can effectively cope with network failure situations.
@@ -47,6 +47,13 @@ If you are interested in fixing issues and contributing directly to the code bas
 * Any feedback is welcome! :)
 
 
+
+## License
+
+Licensed under the [GPL-3.0 License](/LICENSE).
+
+
+
 ## Demo
 
 ### Set Up MPSec
@@ -89,9 +96,3 @@ If you are interested in fixing issues and contributing directly to the code bas
 <p align="center">
    <img src="/md_images/system.gif" width="740px" height="383px"/>
 </p>
-
-
-## License
-
-Licensed under the [GPL-3.0 License](/LICENSE).
-
