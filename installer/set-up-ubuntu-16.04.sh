@@ -9,15 +9,15 @@ fi
 apt-get -y install build-essential libncurses5 libncurses5-dev bin86 kernel-package libssl-dev
 cd ./mptcp
 make mrproper
-cp -rv --preserve=timestamps ../installer/config-4.4.110+.txt .config
+cp -rv --preserve=timestamps ../config-4.4.110+.txt .config
 echo "Finish Auto Make Menuconfig"
 make -j 6
 make modules_install
 make install
-cp -rv --preserve=timestamps ../installer/ubuntu-16.04-grup.txt /etc/default/grub
+cp -rv --preserve=timestamps ../ubuntu-16.04-grup.txt /etc/default/grub
 echo "Finish Auto Grub Select"
 update-grub
-reboot
+# reboot
 # 확인
 # dmesg | grep MPTCP
 
