@@ -48,11 +48,6 @@ If you are interested in fixing issues and contributing directly to the code bas
 
 
 
-## License
-
-Licensed under the [GPL-3.0 License](/LICENSE).
-
-
 
 ## Demo
 
