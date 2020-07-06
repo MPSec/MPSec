@@ -27,7 +27,7 @@ For details on project structure and technical design, please see the [Project R
 
 ## Contributing
 
-This project welcomes contributions and suggestions. 
+This project welcomes contributions and suggestions.
 
 If you are interested in fixing issues and contributing directly to the code base, please see the document below.
 

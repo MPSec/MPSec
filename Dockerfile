@@ -1,6 +1,6 @@
 # 1. ubuntu 설치 (패키지 업데이트 + 만든사람 표시)
 FROM       ubuntu:16.04
-MAINTAINER wnsgml972@gmail.com
+LABEL      maintainer="wnsgml972@gmail.com"
 RUN        apt-get -y update
 
 # 2. 이것저것 설치
