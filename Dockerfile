@@ -7,12 +7,12 @@ RUN	        apt-get -y install build-essential ftpd ssh iperf speedometer git vi
 # 2. tomcat 설치
 RUN	        apt-get -y openjdk-8-jre-headless openjdk-8-jdk
 WORKDIR	    /home/
-RUN	        wget http://apache.tt.co.kr/tomcat/tomcat-8/v8.5.40/bin/apache-tomcat-8.5.40.tar.gz
-RUN	        tar -zxvf apache-tomcat-8.5.40.tar.gz
+RUN	        wget http://apache.tt.co.kr/tomcat/tomcat-8/v8.5.56/bin/apache-tomcat-8.5.56-deployer.tar.gz
+RUN	        tar -zxvf apache-tomcat-8.5.56-deployer.tar.gz
 RUN	        mv apache-tomcat-8.5.40 tomcat8
 WORKDIR	    /home/tomcat8/bin
 RUN	        sudo ./startup.sh
-RUN	        sudo rm /home/$userName/apache-tomcat-8.5.40.tar.gz
+RUN	        sudo rm /home/$userName/apache-tomcat-8.5.56-deployer.tar.gz
 
 # 3. ffmpeg 설치
 WORKDIR	    /home/
