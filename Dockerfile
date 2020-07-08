@@ -87,11 +87,12 @@ RUN	    . ~/.profile
 RUN	    apt install -y ffmpeg
 
 # 4. Home에 Web Application 복사 및 실행
-RUN	    mkdir /home/tomcat8/webapps/ROOT/dashboard
-WORKDIR	    /home/
+COPY	    . /usr/src/app/
+WORKDIR	    /usr/src/app/
 RUN	    ls
-RUN	    cp -r * /home/tomcat8/webapps/ROOT/dashboard/.
-RUN	    xdg-open 'localhost:8080/dashboard/WebContent/'
+
+# 5. 서버 실행 (Listen 포트 정의)
+EXPOSE 4567
 
 
 
