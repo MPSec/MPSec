@@ -11,7 +11,8 @@ RUN	    wget http://apache.tt.co.kr/tomcat/tomcat-8/v8.5.56/bin/apache-tomcat-8.
 RUN	    tar -zxvf apache-tomcat-8.5.56.tar.gz
 RUN	    mv apache-tomcat-8.5.56 tomcat8
 WORKDIR	    /home/tomcat8/bin
-CMD	    [sudo ./startup.sh]
+RUN	    su
+CMD	    [./startup.sh]
 RUN	    rm /home/apache-tomcat-8.5.56.tar.gz
 
 # 3. ffmpeg 설치
@@ -86,13 +87,14 @@ RUN	    echo "MANPATH_MAP $HOME/bin $HOME/ffmpeg_build/share/man" >> ~/.manpath
 RUN	    . ~/.profile
 RUN	    apt install -y ffmpeg
 
-# 4. Home에 Web Application 복사 및 실행
+# 4. Host Container의 Web Application 복사 후 Tomcat에 배포
 COPY	    . /usr/src/app/
+WORKDIR	    /home/tomcat8/webapps/ROOT/dashboard/
 WORKDIR	    /usr/src/app/
-RUN	    ls
+RUN	    cp -r * /home/tomcat8/webapps/ROOT/dashboard/.
 
-# 5. 서버 실행 (Listen 포트 정의)
-EXPOSE 4567
+# 5. 서버 실행 (Listen 포트 정의 : Tomcat의 Listen Port는 8080)
+EXPOSE 8080
 
 
 
