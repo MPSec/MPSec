@@ -18,7 +18,7 @@ To enable us to quickly review and accept your pull requests, **always create on
 
 ### Where to Contribute
 
-Check out the [full issues list](https://github.com/MPSec/Dashboard/issues) for a list of all potential areas for contributions. 
+Check out the [full issues list](https://github.com/MPSec/Dashboard/issues) for a list of all potential areas for contributions.
 
 <!-- There are several reasons we may not accept a pull request like:
 
@@ -35,7 +35,7 @@ To avoid multiple pull requests resolving the same issue, **let others know you 
 
 Please follow the [commit message guidelines.](https://github.com/erlang/otp/wiki/writing-good-commit-messages)
 
-~~~
+~~~commit
 Short (50 chars or less) summary of changes
 
 More detailed explanatory text, if necessary.  Wrap it to about 72
@@ -61,7 +61,7 @@ We're also interested in your feedback for the future of Code. You can submit a 
 
 ## Translations
 
-We appreciate your localization contributions, either by providing new translations, voting on translations, or suggesting process improvements. 
+We appreciate your localization contributions, either by providing new translations, voting on translations, or suggesting process improvements.
 
 ## Discussion Etiquette
 

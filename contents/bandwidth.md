@@ -36,7 +36,7 @@ do
 done
 ~~~
 
-<hr>
+---
 
 ## (실행 ./bw1.sh enp0s8) : 1회 측정
 
@@ -70,7 +70,7 @@ IF=$1
         echo "$TTBPS Mbits/s"
 ~~~
 
-<hr>
+---
 
 ## (실행 ./bwloop.sh enp0s8) : 1회 측정을 계속 호출
 
@@ -108,7 +108,7 @@ $ ./bwloop.sh enp0s8<br/>
 292 Mbits/s<br/>
 ~~~
 
-<hr>
+---
 
 # C 프로그래밍
 
@@ -219,7 +219,7 @@ int main(){
           curr = time(NULL);
           d = localtime(&curr);
 
-		      // ctime(d) to print timeStamp
+          // ctime(d) to print timeStamp
           printf("%s: tx %.6f Mbits/sec rx %.6f Mbits/sec total %.6f Mbits/sec\n",
               tmp2->ifname, tx_in_mbipsf, rx_in_mbipsf, total_in_mbipsf);
           tmp2++;
@@ -259,7 +259,7 @@ enp0s9: tx 2665.40356 Mbits/sec rx 2.70115 Mbits/sec total 2668.10474 Mbits/sec
 enp0s10: tx 2755.54102 Mbits/sec rx 3.05213 Mbits/sec total 2758.59326 Mbits/sec
 ~~~
 
-<hr>
+---
 
 # 리눅스 명령어
 

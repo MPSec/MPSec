@@ -9,7 +9,7 @@ MPSec(Multipath Security) uses [mptcp protocol](https://github.com/multipath-tcp
 
 In addition, it has the following additional functions.
 
-* **Environment configuration is very simple through Docker!**, ([docker hub repository](https://hub.docker.com/repository/docker/wnsgml972/mpsec-app))
+* **Environment configuration is very simple through Docker.** ([docker hub repository](https://hub.docker.com/repository/docker/wnsgml972/mpsec-app))
 * Real-time monitoring using `Dashboard` enables users to manage effectively.
 * Packets are encrypted by `IPSec`.
 * Network speed is improved when communicating with similar bandwidth.

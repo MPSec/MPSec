@@ -1,18 +1,20 @@
 
-## IpSec
+# IpSec
 
-### 1) IPSec 설치
+## 1) IPSec 설치
 
 ~~~shell
-$ sudo apt install strongswan-starter
+sudo apt install strongswan-starter
 ~~~
 
-### 2-1) ipsec  설정 (HOST1)
+## 2-1) ipsec  설정 (HOST1)
 
-* $ cat /etc/ipsec.conf
+~~~shell
+cat /etc/ipsec.conf
+~~~
 
 <pre>
-#ipsec.conf - strongSwan IPsec configuration file
+# ipsec.conf - strongSwan IPsec configuration file
 config setup
 
 conn %default
@@ -36,7 +38,9 @@ conn gw12-8
 
 <br/>
 
-* $ cat /etc/ipsec.secrets
+~~~shell
+cat /etc/ipsec.secrets
+~~~
 
 <pre>
 # This file holds shared secrets or RSA private keys for authentication.
@@ -46,12 +50,14 @@ conn gw12-8
 </pre>
 
 
-### 2-2) ipsec  설정 (HOST2)
+## 2-2) ipsec  설정 (HOST2)
 
-* $ cat /etc/ipsec.conf
+~~~shell
+cat /etc/ipsec.conf
+~~~
 
 <pre>
-#ipsec.conf - strongSwan IPsec configuration file
+# ipsec.conf - strongSwan IPsec configuration file
 config setup
 
 conn %default
@@ -85,14 +91,14 @@ conn gw21-8
 
 </pre>
 
-### 3) IPsec  실행
+## 3) IPsec  실행
 
 ~~~shell
-$ sudo ipsec start
+sudo ipsec start
 ~~~
 
-### 4) IPsec  정지
+## 4) IPsec  정지
 
 ~~~shell
-$ sudo ipsec stop
+sudo ipsec stop
 ~~~

@@ -1,6 +1,7 @@
 # Development description for contribute
 
 ## Done
+
 - ubuntu 16.04 OS에 mptcp 커널 부팅
 - network 환경 구축 및 Testbed Docs
 - ffmpeg를 이용한 스트리밍 환경 구축
@@ -13,6 +14,7 @@
 
 
 ## 환경 설정 (ubuntu 16.04, tomcat 8, mptcp 커널로 부팅)
+
 * mptcp kernel
   * <https://www.multipath-tcp.org/>
   * [MPSec Installer](https://github.com/MPSec/Dashboard/blob/master/readme/HowToBuild.md)
@@ -34,24 +36,27 @@
   * [VM Adapter 5](/contents/in_vm_create_more_than_5_adapter.md), (5개 이상의 어뎁터 생성)
   * [Network 대역폭 제한](/conf/limit-network-state)
 * System Config Output (Installer로 인한 기본 제공)
-    * [System Config Output](/contents/system.md)
+  * [System Config Output](/contents/system.md)
 * Routing
-    * [Routing example](/contents/routing.md)
+  * [Routing example](/contents/routing.md)
 
 <br/>
 
 ## 개발 시 검색 키워드 [ 조절 ]
+
 * 프로그래밍 시 url path나 chart를 수정
 
 
-<hr/>
+---
 
 ### HTML
+
 * index.html,  MPTCP
 * index2.html, IPSec
 * index4.html, System
 
 ### Directory
+
 * jsp
   * process build bath 조절
 * conf
@@ -71,6 +76,7 @@
   * 각종 시스템 설정 가시화 개발
 
 ### Java Script
+
 * build/js/custom.min.js
   * junhee code 주석 검색 (제일 위, 제일 아래)
   * lineChart 검색( 여기서 네트워크 대역폭 차트 조절 )
@@ -79,6 +85,7 @@
   * 커스텀 자바 스크립트
 
 ### Flow
+
 * 버튼 클릭 시
   1. jsp 코드 호출
   2. jsp 코드 내에서 프로세스 빌더를 이용해 쉘 스크립트 실행

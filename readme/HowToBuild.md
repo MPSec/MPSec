@@ -2,9 +2,9 @@
 
 ## Check
 
-* [New ways to verify that Multipath TCP works through your network — MPTCP](http://blog.multipath-tcp.org/blog/html/2015/12/16/mptcp_tools.html): 내 컴퓨터/서버가 MPTCP를 지원하는지 간단히 확인하는 방법을 설명한다.
+* [New ways to verify that Multipath TCP works through your network — MPTCP](http://blog.multipath-tcp.org/blog/html/2015/12/16/mptcp_tools.html): Here's a simple way to check if my computer/server supports MPTCP.
 * MultiPath TCP - Linux Kernel implementation
-* Ubuntu 16.04 (현재 지원 가능한 버젼)
+* Ubuntu 16.04 - Current supported versions
 * Minimum Disk 24GB
 * Minimum RAM 4GB
 
