@@ -8,6 +8,7 @@
 MPSec(Multipath Security) uses [mptcp protocol](https://github.com/multipath-tcp/mptcp), a multi-path transmission technology, to provide highly reliable networking that can effectively cope with network failure situations.
 
 In addition, it has the following additional functions.
+
 * **Environment configuration is simply available through [installer](https://github.com/MPSec/Dashboard/blob/master/readme/HowToBuild.md).**
 * Real-time monitoring using `Dashboard` enables users to manage effectively.
 * Packets are encrypted by `IPSec`.
@@ -26,7 +27,7 @@ For details on project structure and technical design, please see the [Project R
 
 ## Contributing
 
-This project welcomes contributions and suggestions. 
+This project welcomes contributions and suggestions.
 
 If you are interested in fixing issues and contributing directly to the code base, please see the document below.
 
@@ -46,11 +47,6 @@ If you are interested in fixing issues and contributing directly to the code bas
 * [File a bug in GitHub Issues.](https://github.com/MPSec/Dashboard/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Abug)
 * Any feedback is welcome! :)
 
-
-
-## License
-
-Licensed under the [GPL-3.0 License](/LICENSE).
 
 
 
