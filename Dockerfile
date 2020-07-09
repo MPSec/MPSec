@@ -10,9 +10,6 @@ WORKDIR	    /home/
 RUN	    wget http://apache.tt.co.kr/tomcat/tomcat-8/v8.5.56/bin/apache-tomcat-8.5.56.tar.gz
 RUN	    tar -zxvf apache-tomcat-8.5.56.tar.gz
 RUN	    mv apache-tomcat-8.5.56 tomcat8
-WORKDIR	    /home/tomcat8/bin
-RUN	    su
-CMD	    [./startup.sh]
 RUN	    rm /home/apache-tomcat-8.5.56.tar.gz
 
 # 3. ffmpeg 설치
@@ -94,7 +91,7 @@ WORKDIR	    /usr/src/app/
 RUN	    cp -r * /home/tomcat8/webapps/ROOT/dashboard/.
 
 # 5. 서버 실행 (Listen 포트 정의 : Tomcat의 Listen Port는 8080)
-EXPOSE 8080
-
-
-
+EXPOSE	    8080
+ADD         ./bin /usr/local/bin
+RUN         chmod 777 /usr/local/bin/*
+ENTRYPOINT  ["/bin/bash", "start-mpsec.sh"]
