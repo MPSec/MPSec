@@ -1,11 +1,11 @@
-## In VM create more than 5 Adapters
+# In VM create more than 5 Adapters
 
 ## 추가 설명
 
 * 기본적으로는 VB 에서 어뎁터가 4개로 설정되어 있음
 * nic는 어뎁터 이름
 
-![추가설명](/md_images/1.jpg)
+![추가설명](/assets/1.jpg)
 
 1. Hosy-Only 네트워크 망은 실제 VM에서 하나로 ```VirtualBox Host-Only Ethernet Adapter #2``` 라는 이름으로 만들어져 있음
 2. 이 네트워크 망 하나만 이용하여 어뎁터를 총 4개까지 연결, 서브넷 마스크 24로 유지하여 ip를 0.0까지 고정하고 3번째 부터 달리 하면, 각각의 네트워크 망을 생성 할 수는 있음
