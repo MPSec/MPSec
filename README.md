@@ -63,7 +63,7 @@ If you are interested in fixing issues and contributing directly to the code bas
 
 ### Start MPSec
 
-> Pull docker image and Run. <br/>
+> Pull the docker image and run it. <br/>
 > If Docker is not installed, install Docker through the following command.
 
 #### Install Docker

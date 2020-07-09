@@ -31,7 +31,7 @@ git clone https://github.com/MPSec/Dashboard.git
 
 ### Change grub to make kernel select at boot time
 
-> 완료 후 아래와 같이 mptcp 커널로 선택하여 부팅합니다. 
+> 완료 후 아래와 같이 mptcp 커널로 선택하여 부팅합니다.
 
 <img src="/assets/mptcp-kernel.png" width="500px" height="380px"/>
 
@@ -44,7 +44,7 @@ dmesg | grep MPTCP # Check mptcp kernel
 
 ## Configure Environment
 
-> Pull docker image and Run. <br/>
+> Pull the docker image and run it. <br/>
 > If Docker is not installed, install Docker through the following command.
 
 ### Install Docker
