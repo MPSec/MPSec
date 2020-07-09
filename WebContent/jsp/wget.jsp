@@ -2,7 +2,7 @@
     contentType="text/html;charset=EUC-KR" session="false" %>
 
 <%
-    String path = "/home/user/tomcat8/webapps/ROOT/dashboard/ipsec-sh/wget.sh";
+    String path = "/home/tomcat8/webapps/ROOT/dashboard/ipsec-sh/wget.sh";
     String bashCommand[] = {"ls", "-al"}; // bash 명령어
     String scriptCommand[] = {"sh", path}; //shell script 실행
 

@@ -3,7 +3,7 @@
 
 <%
 try {
-    String path = "/home/user/tomcat8/webapps/ROOT/dashboard/ipsec-sh/packet.txt";
+    String path = "/home/tomcat8/webapps/ROOT/dashboard/ipsec-sh/packet.txt";
 
     //파일 객체 생성
     File file = new File(path);

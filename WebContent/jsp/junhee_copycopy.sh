@@ -1,1 +1,1 @@
-cp * /home/user/Desktop/Dashboard-Thema/WebContent/jsp
+cp * /home/Desktop/Dashboard-Thema/WebContent/jsp

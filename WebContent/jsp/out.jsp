@@ -3,7 +3,7 @@
 
 <%
     String param = request.getParameter("interfaceName");
-    String path = "/home/user/tomcat8/webapps/ROOT/dashboard/ipsec-sh/out";
+    String path = "/home/tomcat8/webapps/ROOT/dashboard/ipsec-sh/out";
     String bashCommand[] = {path, param}; // bash 명령어
     String scriptCommand[] = {"sh", path}; //shell script 실행
 

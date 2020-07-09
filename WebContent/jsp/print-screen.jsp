@@ -3,7 +3,7 @@
 
 <html>
 <%
-    String path = "/home/user/tomcat8/webapps/ROOT/dashboard/etri-jsp-sh/ifdown-lo.sh";
+    String path = "/home/tomcat8/webapps/ROOT/dashboard/etri-jsp-sh/ifdown-lo.sh";
     String bashCommand[] = {"ls", "-al"}; // bash 명령어
     String scriptCommand[] = {"sh", path}; //shell script 실행
 

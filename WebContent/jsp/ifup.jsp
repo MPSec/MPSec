@@ -4,7 +4,7 @@
 <html>
 <%
     String param = request.getParameter("interfaceName");
-    String path = "/home/user/tomcat8/webapps/ROOT/dashboard/etri-jsp-sh/ifup.sh";
+    String path = "/home/tomcat8/webapps/ROOT/dashboard/etri-jsp-sh/ifup.sh";
     String bashCommand[] = {"ls", "-al"}; // bash 명령어
     String scriptCommand[] = {"sh", path, param}; //shell script 실행
 
