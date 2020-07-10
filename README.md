@@ -74,10 +74,10 @@ sudo usermod -aG docker $USER                  # Give authority to the user who 
 docker version                                 # Check installed
 ~~~
 
-#### Pull and Run MPSec Docker Image
+#### Pull and Run MPSec Docker
 
 ~~~docker
-docker run -d -p 1234:8080 wnsgml972/mpsec-app:1
+docker run -d -p 1234:8080 wnsgml972/mpsec-app
 ~~~
 
 
