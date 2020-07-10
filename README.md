@@ -83,9 +83,9 @@ docker run -d -p 1234:8080 wnsgml972/mpsec-app
 
 ## Monitoring
 
-### Open Dashboard
+### Welcome
 
-![dashboard](/assets/open.png)
+![dashboard](/assets/welcome.gif)
 
 ### MultiPath
 
