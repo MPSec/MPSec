@@ -2,7 +2,7 @@
    contentType="text/html;charset=EUC-KR" session="false" %>
 
 <%
-    String path = "/home/tomcat8/webapps/ROOT/dashboard/etri-jsp-sh/play-ffmpeg.sh";
+    String path = "/home/tomcat8/webapps/ROOT/MPSec/etri-jsp-sh/play-ffmpeg.sh";
     String bashCommand[] = {"ls", "-al"}; // bash 명령어
     String scriptCommand[] = {"sh", path}; //shell script 실행
 

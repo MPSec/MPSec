@@ -86,9 +86,9 @@ RUN	        apt install -y ffmpeg
 
 # 4. Host Container의 Web Application 복사 후 Tomcat에 배포
 COPY	    . /usr/src/app/
-WORKDIR	    /home/tomcat8/webapps/ROOT/dashboard/
+WORKDIR	    /home/tomcat8/webapps/ROOT/MPSec/
 WORKDIR	    /usr/src/app/
-RUN	        cp -r * /home/tomcat8/webapps/ROOT/dashboard/.
+RUN	        cp -r * /home/tomcat8/webapps/ROOT/MPSec/.
 
 # 5. 서버 실행 (Listen 포트 정의 : Tomcat의 Listen Port는 8080)
 EXPOSE	    8080

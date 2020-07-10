@@ -2,7 +2,7 @@
    contentType="text/html;charset=EUC-KR" session="false" %>
 
 <%
-    String path = "/home/tomcat8/webapps/ROOT/dashboard/system-cpp-sh/memusage";
+    String path = "/home/tomcat8/webapps/ROOT/MPSec/system-cpp-sh/memusage";
     String bashCommand[] = {path}; // bash 명령어
     String scriptCommand[] = {"sh", path}; //shell script 실행
 

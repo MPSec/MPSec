@@ -2,7 +2,7 @@
    contentType="text/html;charset=EUC-KR" session="false" %>
 
 <%
-    String path = "/home/tomcat8/webapps/ROOT/dashboard/gre-sh/differ_traffic_start.sh";
+    String path = "/home/tomcat8/webapps/ROOT/MPSec/gre-sh/differ_traffic_start.sh";
     String bashCommand[] = {"ipsec", "stop"}; // bash 명령어
     String scriptCommand[] = {"sh", path}; //shell script 실행
 

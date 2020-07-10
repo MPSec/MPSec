@@ -3,7 +3,7 @@
 
 <html>
 <%
-    String path = "/home/tomcat8/webapps/ROOT/dashboard/etri-jsp-sh/mptcp_disable.sh";
+    String path = "/home/tomcat8/webapps/ROOT/MPSec/etri-jsp-sh/mptcp_disable.sh";
     String bashCommand[] = {"ls", "-al"}; // bash 명령어
     String scriptCommand[] = {"sh", path}; //shell script 실행
 

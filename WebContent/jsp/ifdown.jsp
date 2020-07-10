@@ -4,7 +4,7 @@
 <html>
 <%
     String param = request.getParameter("interfaceName");
-    String path = "/home/tomcat8/webapps/ROOT/dashboard/etri-jsp-sh/ifdown.sh";
+    String path = "/home/tomcat8/webapps/ROOT/MPSec/etri-jsp-sh/ifdown.sh";
     String bashCommand[] = {"pwd"}; // bash 명령어
     String scriptCommand[] = {"sh", path, param}; //shell script 실행
 

@@ -3,7 +3,7 @@
 <html>
 <%
     String param = request.getParameter("interfaceName");
-    String path = "/home/tomcat8/webapps/ROOT/dashboard/etri-jsp-sh/bw1.sh";
+    String path = "/home/tomcat8/webapps/ROOT/MPSec/etri-jsp-sh/bw1.sh";
     String bashCommand[] = {"ls", "-al"}; // bash 명령어
     String scriptCommand[] = {"sh", path, param}; //shell script 실행
 

@@ -2,7 +2,7 @@
    contentType="text/html;charset=EUC-KR" session="false" %>
 
 <%
-    String path = "/home/tomcat8/webapps/ROOT/dashboard/ipsec-sh/tcp-ipsec-start.sh";
+    String path = "/home/tomcat8/webapps/ROOT/MPSec/ipsec-sh/tcp-ipsec-start.sh";
     String bashCommand[] = {"ipsec", "start"}; // bash 명령어
     String scriptCommand[] = {"sh", path}; //shell script 실행
 
