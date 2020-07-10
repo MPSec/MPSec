@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sysctl -w net.mptcp.mptcp_enabled=1
 sysctl -w net.mptcp.mptcp_checksum=0
 sysctl -w net.mptcp.mptcp_path_manager=fullmesh

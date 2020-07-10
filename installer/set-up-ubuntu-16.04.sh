@@ -1,3 +1,5 @@
+#!/bin/bash
+
 apt-get -y install git
 if [ ! -d ./mptcp ]
 then 
@@ -18,6 +20,4 @@ cp -rv --preserve=timestamps ../ubuntu-16.04-grup.txt /etc/default/grub
 echo "Finish Auto Grub Select"
 update-grub
 # reboot
-# 확인
-# dmesg | grep MPTCP
-
+# dmesg | grep MPTCP # Check MPTCP

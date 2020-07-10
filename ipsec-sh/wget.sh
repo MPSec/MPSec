@@ -4,7 +4,7 @@
 INTERVAL="1"  # update interval in seconds
 
 IF=$1
-
+# hard input ip (input other test pc ip)
 while true
 do
         wget ftp://user:1@192.168.10.2/file1

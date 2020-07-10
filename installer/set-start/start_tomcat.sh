@@ -1,3 +1,4 @@
-userName="user"
+#!/bin/bash
+
 service tomcat8 stop
-/home/$userName/tomcat8/bin/startup.sh
+/home/tomcat8/bin/startup.sh
