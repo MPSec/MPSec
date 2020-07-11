@@ -76,8 +76,10 @@ docker version                                 # Check installed
 
 #### Pull and Run MPSec Docker
 
+For details on project packages, please see the [GitHub MPSec Packages](https://github.com/MPSec/MPSec/packages).
+
 ~~~docker
-docker run -d -p 1234:8080 wnsgml972/mpsec-app
+docker run -d -p 1234:8080 docker.pkg.github.com/mpsec/mpsec/mpsec-app
 ~~~
 
 
