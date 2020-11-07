@@ -76,9 +76,12 @@ docker version                                 # Check installed
 
 #### Pull and Run MPSec Docker
 
-For details on project packages, please see the [GitHub MPSec Packages](https://github.com/MPSec/MPSec/packages).
+- For details on project packages, please see the [GitHub MPSec Packages](https://github.com/MPSec/MPSec/packages).
+- [Only Read Packages Token](/contents/read_packages_token.md)
 
-~~~docker
+~~~shell
+# docker login with `read:packages token`
+docker login -u {user.name} -p {read:packages token number}
 docker run -d -p 1234:8080 docker.pkg.github.com/mpsec/mpsec/mpsec-app
 ~~~
 
