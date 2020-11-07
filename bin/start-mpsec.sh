@@ -13,8 +13,8 @@ sysctl -w net.mptcp.mptcp_scheduler=default
 sysctl -w net.ipv4.tcp_congestion_control=olia
 
 # 4. ffmpeg refresh & ffserver start
-#kill -9 `ps -ef | grep ffmpeg | awk '{print $2}'`
-#ffserver -f /home/tomcat8/webapps/ROOT/MPSec/conf/ffserver.conf
+kill -9 `ps -ef | grep ffmpeg | awk '{print $2}'`
+ffserver -f /home/tomcat8/webapps/ROOT/MPSec/conf/ffserver.conf
 
 # 5. Open Web Application
 #xdg-open 'localhost:8080/MPSec/WebContent/index.html' &
