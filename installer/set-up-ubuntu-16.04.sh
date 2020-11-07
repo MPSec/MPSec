@@ -3,7 +3,7 @@
 apt-get -y install git
 if [ ! -d ./mptcp ]
 then 
-git clone -b mptcp_v0.92 git://github.com/multipath-tcp/mptcp
+git clone -b mptcp_v0.92 https://github.com/MPSec/mptcp.git
 echo "No file"
 else
 echo "File exist! skip download!"
