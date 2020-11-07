@@ -81,7 +81,7 @@ docker version                                 # Check installed
 
 ~~~shell
 # docker login with `read:packages token`
-docker login -u {user.name} -p {read:packages token number}
+docker login docker.pkg.github.com/mpsec/mpsec/mpsec-app -u {user.name} -p {read:packages token number}
 docker run -d -p 1234:8080 docker.pkg.github.com/mpsec/mpsec/mpsec-app
 ~~~
 
