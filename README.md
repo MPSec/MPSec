@@ -74,7 +74,7 @@ sudo usermod -aG docker $USER                  # Give authority to the user who 
 docker version                                 # Check installed
 ~~~
 
-#### Pull and Run MPSec Docker
+#### Login, Run(Pull) MPSec Docker
 
 - For details on project packages, please see the [GitHub MPSec Packages](https://github.com/MPSec/MPSec/packages).
 - [Only Read Packages Token](/contents/read_packages_token.md)
