@@ -32,6 +32,8 @@ jobs:
         with:
           push: true
           tags: user/app:latest
+          ache-from: type=registry,ref=user/app:latest
+          cache-to: type=inline
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
