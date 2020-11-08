@@ -34,6 +34,8 @@ jobs:
           tags: user/app:latest
           ache-from: type=registry,ref=user/app:latest
           cache-to: type=inline
+          secrets: |
+            GIT_AUTH_TOKEN=${{ secrets.PACKAGES_READ_WRITE }}
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
