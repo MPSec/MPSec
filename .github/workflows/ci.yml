@@ -3,16 +3,8 @@
 name: ci
 
 on:
-  workflow_dispatch:
-    inputs:
-      name:
-        description: 'Docker CI'
-        default: 'World'
-        required: true
-
-#on:
-#  push:
-#    branches: master
+  pull_request:
+    branches: master
 
 jobs:
   main:
