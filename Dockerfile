@@ -7,7 +7,7 @@ RUN	        apt-get -y install build-essential ftpd ssh iperf speedometer git vi
 # 2. tomcat 설치
 RUN	        apt-get -y install openjdk-8-jre-headless openjdk-8-jdk
 WORKDIR	    /home/
-RUN	        wget http://apache.tt.co.kr/tomcat/tomcat-8/v8.5.59/bin/apache-tomcat-8.5.59.tar.gz
+RUN	        wget https://github.com/MPSec/tomcat/releases/download/custom-8.5.59/apache-tomcat-8.5.59.tar.gz
 RUN	        tar -zxvf apache-tomcat-8.5.59.tar.gz
 RUN	        mv apache-tomcat-8.5.59 tomcat8
 RUN	        rm /home/apache-tomcat-8.5.59.tar.gz
