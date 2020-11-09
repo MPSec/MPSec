@@ -1,5 +1,5 @@
 # MPSec
-
+![ci](https://github.com/MPSec/MPSec/workflows/ci/badge.svg)
 [![Language](https://img.shields.io/badge/NaverFest-Finalist-brightgreen.svg)](https://github.com/D2CampusFest/6th)
 [![GitHub issues](https://img.shields.io/github/issues/MPSec/MPSec.svg)](https://github.com/MPSec/MPSec/issues)
 [![PR's Welcome](https://img.shields.io/badge/PRs%20-welcome-brightgreen.svg?colorB=orange)](#contributing)
