@@ -23,11 +23,8 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: docker.pkg.github.com/mpsec/mpsec/mpsec-app
-          username: ${{ github.repository_owner }}
+          username: wnsgml972
           password: ${{ secrets.PACKAGES_READ_WRITE }}
-      - 
-          name: nana1
-          run: echo ${{ github.repository_owner }}
       - 
           name: nana2
           run: echo ${{ secrets.PACKAGES_READ_WRITE }}
