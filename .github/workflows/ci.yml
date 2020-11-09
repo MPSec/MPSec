@@ -22,16 +22,22 @@ jobs:
         name: Login to GitHub Packages Docker Registry
         uses: docker/login-action@v1
         with:
-          registry: docker.pkg.github.com
+          registry: docker.pkg.github.com/mpsec/mpsec/mpsec-app
           username: ${{ github.repository_owner }}
           password: ${{ secrets.PACKAGES_READ_WRITE }}
+      - 
+          name: nana1
+          run: echo ${{ github.repository_owner }}
+      - 
+          name: nana2
+          run: echo ${{ secrets.PACKAGES_READ_WRITE }}
       -
         name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: /mpsec/mpsec-app:latest
+          tags: user/app:latest
           cache-from: type=registry,ref=user/app:latest
           cache-to: type=inline
           secrets: |
