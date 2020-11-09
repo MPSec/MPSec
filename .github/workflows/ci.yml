@@ -31,8 +31,8 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: /mpsec/mpsec/mpsec-app:latest
-          ache-from: type=registry,ref=user/app:latest
+          tags: /mpsec/mpsec-app:latest
+          cache-from: type=registry,ref=user/app:latest
           cache-to: type=inline
           secrets: |
             GIT_AUTH_TOKEN=${{ secrets.PACKAGES_READ_WRITE }}
