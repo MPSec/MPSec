@@ -1,7 +1,7 @@
 # MPSec
 ![ci](https://github.com/MPSec/MPSec/workflows/ci/badge.svg)
-[![Language](https://img.shields.io/badge/NaverFest-Finalist-brightgreen.svg)](https://github.com/D2CampusFest/6th)
-[![Language](https://img.shields.io/badge/oss2020-prize-blue)](https://www.oss.kr/festival/award)
+[![naver-d2-fest](https://img.shields.io/badge/naver--d2--fest-prize-brightgreen)](https://github.com/D2CampusFest/6th)
+[![oss2020](https://img.shields.io/badge/oss2020-prize-blue)](https://www.oss.kr/festival/award)
 [![GitHub issues](https://img.shields.io/github/issues/MPSec/MPSec.svg)](https://github.com/MPSec/MPSec/issues)
 [![PR's Welcome](https://img.shields.io/badge/PRs%20-welcome-brightgreen.svg?colorB=orange)](#contributing)
 
